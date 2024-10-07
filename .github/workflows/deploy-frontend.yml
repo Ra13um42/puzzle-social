@@ -32,9 +32,9 @@ jobs:
           host: 128.140.89.159
           username: puzzle-social-frontend
           port: 22
-          strip_components: 3
+          strip_components: 2
           overwrite: true
           rm: true
           key: ${{ secrets.SCP_SSH_KEY }}
           source:  ./dist/
-          target: /var/www/puzzle-social/
+          target: /var/www/puzzle-social/static/
