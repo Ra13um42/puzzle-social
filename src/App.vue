@@ -21,7 +21,6 @@ import { RouterView } from 'vue-router'
 import { transitionOut, transitionIn } from './modules/transition.module'
 import AppHeader from './components/AppHeader.vue'
 import MobileMenu from './components/MobileMenu.vue'
-import imagePath from '/bubbles.webp?url'
 
 </script>
 
