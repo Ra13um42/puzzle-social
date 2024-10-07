@@ -1,0 +1,40 @@
+name: Deploy frontend
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    name: Build and Deploy
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: 'true'
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install all dependencies
+        run: npm install
+        working-directory: ./
+
+      - name: Build
+        run: npm run build
+        working-directory: ./
+
+      - name: Upload files to server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: 128.140.89.159
+          username: puzzle-social-frontend
+          port: 22
+          strip_components: 3
+          overwrite: true
+          rm: true
+          key: ${{ secrets.SCP_SSH_KEY }}
+          source:  ./dist/
+          target: /var/www/puzzle-social/
