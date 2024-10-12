@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto max-w-screen-xl mt-17 mb-70">
+  <div class="container mx-auto max-w-screen-xl mt-17 mb-60">
     <h1 class="text-4xl font-bold text-center mb-6">Terms of Service</h1>
 
     <p class="mb-4 text-sm text-gray-600">Last updated: October 12, 2024</p>
@@ -32,8 +32,9 @@
 
     <h2 class="text-2xl font-semibold mt-6 mb-3">4. Privacy</h2>
     <p class="mb-4">
-      Your privacy is important to us. Please review our <a href="/privacy"
-        class="text-blue-600 hover:underline">Privacy Policy</a> to understand how we handle your data.
+      Your privacy is important to us. Please review our <RouterLink to="/privacy"
+        class="text-blue-600 hover:underline">Privacy Policy</RouterLink>
+      to understand how we handle your data.
     </p>
 
     <h2 class="text-2xl font-semibold mt-6 mb-3">5. Termination</h2>

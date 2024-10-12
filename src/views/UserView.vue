@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto max-w-2xl py-1 lg:py-17 xl:py-20">
+  <div class="mx-auto max-w-2xl py-1 lg:py-17 xl:py-20 mb-30">
     <div class="text-center">
       <h1 class="text-5xl md:text-[4rem] font-bold tracking-tight text-gray-900">{{ profileUser?.name }}</h1>
       <p class="mt-6 text-xl leading-8 text-gray-600" v-if="own">Dein Profil.</p>

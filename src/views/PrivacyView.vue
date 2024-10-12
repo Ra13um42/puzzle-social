@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto max-w-screen-xl mt-17 mb-70">
+  <div class="container mx-auto max-w-screen-xl mt-17 mb-60">
     <h1 class="text-4xl font-bold text-center mb-6">Privacy Policy</h1>
 
     <p class="mb-4 text-sm text-gray-600">Last updated: October 12, 2024</p>

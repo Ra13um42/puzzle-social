@@ -1,6 +1,6 @@
 <template>
 
-  <div class="container mx-auto h-100 mt-40 max-w-screen-xl">
+  <div class="container mx-auto my-40 max-w-screen-xl">
 
     <div class="w-full hidden text-left text-[1.5rem] text-gray-600 ">Neu auf Puzzle</div>
 
