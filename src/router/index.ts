@@ -9,6 +9,8 @@ import UsersView from '../views/UsersView.vue'
 import EventsView from '../views/EventsView.vue'
 import LocationsView from '../views/LocationsView.vue'
 import UserView from '../views/UserView.vue'
+import TermsView from '../views/TermsView.vue'
+import PrivacyView from '../views/PrivacyView.vue'
 
 const { loggedin, authChecked, doCheckAuth } = useAuth()
 const { hideMobileMenu } = useApp()
@@ -48,6 +50,16 @@ export const routes = [
       path: '/user/:id?',
       name: 'user',
       component: UserView
+    },
+    {
+      path: '/terms',
+      name: 'terms',
+      component: TermsView
+    },
+    {
+      path: '/privacy',
+      name: 'privacy',
+      component: PrivacyView
     },
   ]
 
