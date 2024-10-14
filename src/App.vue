@@ -23,6 +23,8 @@
 
   <MobileMenu />
 
+  <Modal />
+
 </template>
 
 <script setup lang="ts">
@@ -31,6 +33,7 @@ import { transitionOut, transitionIn } from './modules/transition.module'
 import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
 import MobileMenu from './components/MobileMenu.vue'
+import Modal from './components/Modal.vue'
 
 </script>
 

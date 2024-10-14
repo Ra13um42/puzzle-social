@@ -29,6 +29,10 @@
     </div>
 
     <div class="flex items-center">
+      <RouterLink to="/settings"
+        class="cursor-pointer text-gray-800 font-medium rounded-lg text-md px-4 lg:px-5 py-2 lg:py-2.5 -mr-4 hidden md:block"
+        v-if="loggedin">⚙️</RouterLink>
+
       <RouterLink to="/user"
         class="cursor-pointer text-gray-800 font-medium rounded-lg text-md px-4 lg:px-5 py-2 lg:py-2.5 mr-2 hidden md:block"
         v-if="loggedin">{{ user.name }}</RouterLink>

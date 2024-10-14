@@ -48,9 +48,14 @@ const logoutClicked = () => {
         <a @click="logoutClicked" v-if="loggedin"
           class="cursor-pointer text-white bg-indigo-700 hover:bg-indigo-600 font-medium rounded-lg text-md px-4 py-2.5 ml-6 mr-2">Logout</a>
 
-        <RouterLink to="/user" v-if="loggedin" class="block text-black text-lg font-medium hover:text-indigo-600 mt-10">
+        <RouterLink to="/user" v-if="loggedin" class="block text-black text-lg font-medium hover:text-indigo-600 mt-12">
           Dein
           Profil
+        </RouterLink>
+
+        <RouterLink to="/settings" v-if="loggedin"
+          class="block text-black text-lg font-medium hover:text-indigo-600 py-4">
+          Einstellungen
         </RouterLink>
       </div>
     </div>

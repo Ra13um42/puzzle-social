@@ -1,3 +1,4 @@
+
 declare interface User {
   _id: string
   name: string
@@ -7,4 +8,6 @@ declare interface User {
   photo: string
   created: string
   eventsKey: string
+  location: OsmLocation
+  country: Country
 }

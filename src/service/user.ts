@@ -1,5 +1,5 @@
 import { reactive, toRefs } from "vue";
-import { fetchUsers, updateName } from '../api/user'
+import { fetchUsers, fetchUser, updateName, updateLocation, type UpdateLocationDto, deleteUser } from '../api/user'
 
 const state = reactive({
   users: new Array as User[],
@@ -19,6 +19,10 @@ const getUsers = async () => {
   }
 }
 
+const getUserById = async (userId: string) => {
+  return fetchUser(userId)
+}
+
 const doUpdateName = async (name: string) => {
   try {
     await updateName(name)
@@ -27,10 +31,25 @@ const doUpdateName = async (name: string) => {
   }
 }
 
+const saveLocation = async (locationData: UpdateLocationDto) => {
+  try {
+    await updateLocation(locationData)
+  } catch(error: any) {
+    throw new Error()
+  }
+}
+
+const deleteAccount = async () => {
+  await deleteUser()
+}
+
 export default function useUsers() {
   return {
     ...toRefs(state),
     getUsers,
-    doUpdateName
+    getUserById,
+    doUpdateName,
+    saveLocation,
+    deleteAccount
   }
 }

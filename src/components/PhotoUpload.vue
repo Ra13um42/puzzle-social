@@ -3,6 +3,7 @@
     <input id="file-input" ref="fileInput" class="hidden" type="file" @change="imageSelected($event)" />
     Bild ändern
   </label>
+  <span class="block mt-4" v-if="message">{{ message }}</span>
 </template>
 
 
@@ -14,6 +15,7 @@ let previewImageSrc = ref(null)
 
 let image = ref()
 let fileInput = ref(null)
+let message = ref('')
 
 const props = defineProps({
   url: String
@@ -22,13 +24,22 @@ const props = defineProps({
 const emit = defineEmits(['uploaded'])
 
 let imageSelected = (event: any) => {
+  message.value = ''
+
   if (event.target.files.length > 0) {
-    image.value = event.target.files[0]
-    const reader = new FileReader()
-    reader.readAsDataURL(image.value)
-    reader.onload = e => {
-      save()
+    const file = event.target.files[0]
+
+    if (file.size / 1000000 > 2) {
+      message.value = 'Bild zu groß. (maximal 2mb)'
+    } else {
+      image.value = file
+      const reader = new FileReader()
+      reader.readAsDataURL(image.value)
+      reader.onload = e => {
+        save()
+      }
     }
+
   }
 }
 

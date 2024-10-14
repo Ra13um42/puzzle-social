@@ -11,6 +11,8 @@ import LocationsView from '../views/LocationsView.vue'
 import UserView from '../views/UserView.vue'
 import TermsView from '../views/TermsView.vue'
 import PrivacyView from '../views/PrivacyView.vue'
+import TikTokRedirectView from '../views/TikTokRedirectView.vue'
+import SettingsView from '../views/SettingsView.vue'
 
 const { loggedin, authChecked, doCheckAuth } = useAuth()
 const { hideMobileMenu } = useApp()
@@ -60,6 +62,16 @@ export const routes = [
       path: '/privacy',
       name: 'privacy',
       component: PrivacyView
+    },
+    {
+      path: '/auth/callback',
+      name: 'tiktok_redirect',
+      component: TikTokRedirectView
+    },
+    {
+      path: '/settings',
+      name: 'settings',
+      component: SettingsView
     },
   ]
 
