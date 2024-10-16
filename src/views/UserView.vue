@@ -11,7 +11,7 @@
           <Text path="profile.subtitle" />
         </p>
 
-        <div class="px-7 md:p-0 min-h-50">
+        <div class="px-5 md:p-0 min-h-50">
           <img :src="photoUrl()" class="inline rounded-lg mx-auto md:max-w-79 mt-10" v-if="loaded">
           <photo-upload @uploaded="onPhotoUploaded" url="users/me/photo" v-if="isOwn"></photo-upload>
         </div>

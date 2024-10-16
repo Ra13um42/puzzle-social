@@ -57,7 +57,11 @@
       "insert_city": "Stadt eingeben",
       "search": "Suchen",
       "no_result": "Kein Ergebnis",
-      "save": "Speichern"
+      "save": "Speichern",
+      "enable_panning_hint": "Auf Karte tippen, um Verschieben zu aktivieren.",
+      "disable_panning_hint": "Auf Karte tippen, um Verschieben zu deaktivieren.",
+      "enable_zooming_hint": "Auf Karte klicken, um Zoomen zu aktivieren.",
+      "disable_zooming_hint": "Auf Karte klicken, um Zoomen zu deaktivieren."
     },
     "back": "Zurück"
   },
