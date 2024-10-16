@@ -1,9 +1,12 @@
 <template>
-  <label class="block w-32 mt-9 py-2 px-4 bg-gray-100 cursor-pointer text-center rounded-md ">
-    <input id="file-input" ref="fileInput" class="hidden" type="file" @change="imageSelected($event)" />
-    Bild ändern
-  </label>
-  <span class="block mt-4" v-if="message">{{ message }}</span>
+  <div class="flex">
+    <label class="block mt-9 py-2 px-4 bg-gray-100 cursor-pointer text-center rounded-md">
+      <input id="file-input" ref="fileInput" class="hidden" type="file" @change="imageSelected($event)" />
+      <Text path="profile.change_image" />
+    </label>
+    <span class="block mt-4" v-if="message">{{ message }}</span>
+  </div>
+
 </template>
 
 

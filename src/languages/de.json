@@ -1,0 +1,92 @@
+{
+  "app": {
+    "title": "Puzzle.",
+    "subtitle": "Das Soziale Netzwerk für Verbindung.",
+    "menu": {
+      "people": "Menschen",
+      "events": "Veranstaltungen",
+      "locations": "Treffpunkte"
+    },
+    "login": "Login",
+    "logout": "Logout",
+    "start": "Start",
+    "register": "Anmelden",
+    "signup": "Registrieren",
+    "your_profile": "Dein Profil",
+    "settings": "Einstellungen",
+    "yes": "Ja",
+    "no": "Nein",
+    "ok": "Ok",
+    "cancel": "Abbrechen",
+    "footer": {
+      "copyright": "© 2024 Puzzle Social",
+      "terms": "Nutzungsbedingungen",
+      "privacy": "Datenschutzerklärung"
+    }
+  },
+  "login": {
+    "title": "Login",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "button": "Login",
+    "error": "Login nicht erfolgreich"
+  },
+  "signup": {
+    "name_question": "Wie willst du auf Puzzle heißen?",
+    "name": "Name",
+    "name_confirm_button": "Ok",
+    "email_password": "Email und Passwort festlegen.",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "create_account": "Account erstellen"
+  },
+  "profile": {
+    "subtitle": "Profil auf Puzzle.",
+    "subtitle_own": "Dein Profil.",
+    "about_me": "Über mich",
+    "social_media": "Social Media",
+    "coming_soon": "Coming soon.",
+    "change_image": "Bild ändern",
+    "location": {
+      "title": "Standort",
+      "set": "festlegen",
+      "change": "ändern",
+      "not_set": "Nicht angegeben",
+      "select_country": "Land auswählen",
+      "country_filter": "Filtern",
+      "insert_city": "Stadt eingeben",
+      "search": "Suchen",
+      "no_result": "Kein Ergebnis",
+      "save": "Speichern"
+    },
+    "back": "Zurück"
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "subtitle": "Einstellungen",
+    "delete_account": {
+      "title": "Account Löschen",
+      "button": "Löschen",
+      "confirm": "Account wirklich löschen?",
+      "success": "Account gelöscht."
+    },
+    "language": "Sprache"
+  },
+  "pages": {
+    "people": {
+      "title": "Menschen.",
+      "subtitle": "Profile und Visionen.",
+      "coming_soon": "Coming soon."
+    },
+    "events": {
+      "title": "Events.",
+      "subtitle": "Tanz-Parties und Grillabende.",
+      "coming_soon": "Coming soon."
+    },
+    "locations": {
+      "title": "Orte.",
+      "subtitle": "Kommunen, Höfe und Gärten.",
+      "coming_soon": "Coming soon."
+    }
+  }
+}

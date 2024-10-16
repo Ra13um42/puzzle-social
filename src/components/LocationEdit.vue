@@ -18,7 +18,8 @@
 
         <input id="filter_input"
           class="block w-full px-4 py-1.75 text-gray-800 border rounded-md border-gray-300 focus:outline-none"
-          type="text" placeholder="Search" autocomplete="off" v-model="filter" ref="filter_input">
+          type="text" :placeholder="text('profile.location.country_filter')" autocomplete="off" v-model="filter"
+          ref="filter_input">
 
         <span v-for="(option) in filteredCountries"
           class="block px-4 py-1.5 text-left text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer rounded-md"
@@ -29,17 +30,22 @@
     </div>
 
     <div class="mt-4" v-if="selectedCountry">
-      <input type="text" placeholder="Stadt eingeben" v-model="cityQuery" id="city_input" ref="city_input"
+      <input type="text" :placeholder="text('profile.location.insert_city')" v-model="cityQuery" id="city_input"
+        ref="city_input"
         class="px-3 py-[0.45rem] md:py-1.5 border-1 shadow-sm border-gray-200 outline-none rounded-md text-md w-full md:w-60 text-black placeholder-text-md placeholder-text-gray-400"
         @keydown.enter="citySearch">
 
       <button
         class="cursor-pointer ml-0 md:ml-5 mt-5 md:mt-3 rounded-md bg-white px-6 py-2.25 text-sm font-semibold text-black shadow-sm shadow-gray-300 hover:bg-gray-100"
-        @click="citySearch">Suchen</button>
+        @click="citySearch">
+        <Text path="profile.location.search" />
+      </button>
 
       <button
         class="cursor-pointer ml-0 ml-4 md:ml-5 mt-5 md:mt-3 rounded-md bg-indigo-700 px-6 py-2.25 text-sm font-semibold text-white shadow-sm shadow-gray-300 hover:bg-indigo-600"
-        @click="saveClicked" v-if="location_result">Speichern</button>
+        @click="saveClicked" v-if="location_result">
+        <Text path="profile.location.save" />
+      </button>
     </div>
 
   </div>
@@ -49,6 +55,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, useTemplateRef, nextTick } from 'vue'
 import useUser from '../service/user'
+import useLanguage from './../service/language'
 import { countries } from 'countries-list'
 
 const emit = defineEmits(['locationSelected', 'locationSaved'])
@@ -56,6 +63,7 @@ const emit = defineEmits(['locationSelected', 'locationSaved'])
 const props = defineProps<{ locationData: LocationData | undefined }>()
 
 const { saveLocation } = useUser()
+const { text } = useLanguage()
 
 const countryArray = Object.entries(countries).map(([code, details]) => ({
   code,
@@ -75,7 +83,7 @@ let filter = ref('')
 
 
 const dropdownValue = computed(() => {
-  return selectedCountry.value ? selectedCountry.value.native : 'Land auswählen'
+  return selectedCountry.value ? selectedCountry.value.native : text('profile.location.select_country')
 })
 
 const filteredCountries = computed(() => {

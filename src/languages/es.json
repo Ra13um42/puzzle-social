@@ -1,0 +1,92 @@
+{
+  "app": {
+    "title": "Puzzle.",
+    "subtitle": "Sozial Network for Connection.",
+    "menu": {
+      "people": "People",
+      "events": "Events",
+      "locations": "Locations"
+    },
+    "login": "Login",
+    "logout": "Logout",
+    "start": "Start",
+    "register": "Signup",
+    "signup": "Signup",
+    "your_profile": "Your Profile",
+    "settings": "Settings",
+    "yes": "Yes",
+    "no": "No",
+    "ok": "Ok",
+    "cancel": "Cancel",
+    "footer": {
+      "copyright": "© 2024 Puzzle Social",
+      "terms": "Terms of Service",
+      "privacy": "Privacy Policy"
+    }
+  },
+  "login": {
+    "title": "Login",
+    "email": "E-Mail",
+    "password": "Password",
+    "button": "Login",
+    "error": "Login not successful"
+  },
+  "signup": {
+    "name_question": "Select a name on Puzzle.",
+    "name": "Name",
+    "name_confirm_button": "Ok",
+    "email_password": "Set email and password.",
+    "email": "E-Mail",
+    "password": "Password",
+    "create_account": "Create Account"
+  },
+  "profile": {
+    "subtitle": "Profile on Puzzle.",
+    "subtitle_own": "Your Profile.",
+    "about_me": "About me",
+    "social_media": "Social Media",
+    "coming_soon": "Coming soon.",
+    "change_image": "Change Picture",
+    "location": {
+      "title": "Location",
+      "set": "set",
+      "change": "change",
+      "not_set": "Not set",
+      "select_country": "Select country",
+      "country_filter": "Filter",
+      "insert_city": "Insert city",
+      "search": "Search",
+      "no_result": "No result",
+      "save": "Save"
+    },
+    "back": "Back"
+  },
+  "settings": {
+    "title": "Settings",
+    "subtitle": "Settings",
+    "delete_account": {
+      "title": "Delete Account",
+      "button": "Delete",
+      "confirm": "Really delete Account?",
+      "success": "Account deleted."
+    },
+    "language": "Sprache"
+  },
+  "pages": {
+    "people": {
+      "title": "People.",
+      "subtitle": "Profiles and Visions.",
+      "coming_soon": "Coming soon."
+    },
+    "events": {
+      "title": "Events.",
+      "subtitle": "Dance parties and barbecues.",
+      "coming_soon": "Coming soon."
+    },
+    "locations": {
+      "title": "Places.",
+      "subtitle": "Communities, farms and gardens.",
+      "coming_soon": "Coming soon."
+    }
+  }
+}
