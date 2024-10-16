@@ -4,8 +4,12 @@
     <div class="flex flex-col md:flex-row justify-between">
       <div>
         <h1 class="text-5xl md:text-[4rem] font-bold tracking-tight text-gray-900">{{ user?.name }}</h1>
-        <p class="mt-6 text-xl leading-8 text-gray-600" v-if="isOwn">Dein Profil.</p>
-        <p class="mt-6 text-xl leading-8 text-gray-600" v-if="!isOwn">Profil auf Puzzle.</p>
+        <p class="mt-6 text-xl leading-8 text-gray-600" v-if="isOwn">
+          <Text path="profile.subtitle_own" />
+        </p>
+        <p class="mt-6 text-xl leading-8 text-gray-600" v-if="!isOwn">
+          <Text path="profile.subtitle" />
+        </p>
 
         <div class="px-7 md:p-0 min-h-50">
           <img :src="photoUrl()" class="inline rounded-lg mx-auto md:max-w-79 mt-10" v-if="loaded">
@@ -14,27 +18,37 @@
       </div>
 
       <div class="text-right pt-15">
-        <p class="text-xl">Über mich</p>
-        <p class="text-lg text-gray-300">Coming soon</p>
+        <p class="text-xl">
+          <Text path="profile.about_me" />
+        </p>
+        <p class="text-lg text-gray-300">
+          <Text path="profile.coming_soon" />
+        </p>
         <br><br>
-        <p class="text-xl">Social Media</p>
-        <p class="text-lg text-gray-300">Coming soon</p>
+        <p class="text-xl">
+          <Text path="profile.social_media" />
+        </p>
+        <p class="text-lg text-gray-300">
+          <Text path="profile.coming_soon" />
+        </p>
       </div>
     </div>
 
     <div>
       <div class="relative mt-14 md:mt-20">
-        <span class="mt-6 text-2xl leading-8 text-gray-800">Standort</span>
+        <span class="mt-6 text-2xl leading-8 text-gray-800">
+          <Text path="profile.location.title" />
+        </span>
 
         <div class="inline" v-if="isOwn">
           <button
             class="cursor-pointer ml-0 ml-5 mt-1 rounded-md px-4 py-1.5 text-sm font-semibold shadow-sm text-black shadow-gray-300 hover:bg-gray-100"
             @click="editClicked" v-if="!editLocation && isOwn">
             <span v-if="!user?.location">
-              festlegen
+              <Text path="profile.location.set" />
             </span>
             <span v-else>
-              ändern
+              <Text path="profile.location.change" />
             </span>
           </button>
 
@@ -45,9 +59,12 @@
 
         <div class="mt-5" v-if="mapData">{{ mapData?.location?.display_name }}</div>
         <div class="mt-5 text-lg text-gray-300"
-          v-if="!user?.location && !mapData?.location?.display_name && !editLocation">Nicht
-          angegeben</div>
-        <div class="mt-10" v-if="notFound">kein Ergebnis</div>
+          v-if="!user?.location && !mapData?.location?.display_name && !editLocation">
+          <Text path="profile.location.not_set" />
+        </div>
+        <div class="mt-10" v-if="notFound">
+          <Text path="profile.location.no_result" />
+        </div>
 
 
         <MapDisplay :locationData="mapData" />
@@ -57,7 +74,9 @@
       <div class="flex items-center justify-center gap-x-6 mt-12 md:mt-19 pb-24">
         <button
           class="cursor-pointer mt-3 rounded-md bg-white px-7.5 py-2.25 text-sm font-semibold text-black shadow-sm shadow-gray-300 hover:bg-gray-100"
-          aria-current="page" v-if="route.params.id" @click="goBack">Zurück</button>
+          aria-current="page" v-if="route.params.id" @click="goBack">
+          <Text path="profile.back" />
+        </button>
       </div>
     </div>
   </div>
@@ -101,7 +120,6 @@ const onLocationSaved = (locationData: LocationData) => {
     user.value.location = locationData.location
     user.value.country = locationData.country
   }
-
 }
 
 const editClicked = () => {

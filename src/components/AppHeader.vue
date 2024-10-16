@@ -4,7 +4,7 @@
 
     <div class="flex items-center cursor-pointer">
       <RouterLink to="/" class="text-indigo-700 dark:text-red-500 text-[1.6rem] font-semibold">
-        Puzzle.
+        <Text path="app.title" />
       </RouterLink>
     </div>
 
@@ -13,22 +13,31 @@
         <li>
           <RouterLink to="/users"
             class="cursor-pointer block py-2 pr-4 pl-3 hover:text-blue-800 rounded lg:bg-transparent lg:p-0"
-            aria-current="page">Menschen</RouterLink>
+            aria-current="page">
+            <Text path="app.menu.people" />
+          </RouterLink>
         </li>
         <li>
           <RouterLink to="/events"
             class="cursor-pointer block py-2 pr-4 pl-3 hover:text-blue-800 rounded lg:bg-transparent lg:p-0"
-            aria-current="page">Veranstaltungen</RouterLink>
+            aria-current="page">
+            <Text path="app.menu.events" />
+          </RouterLink>
         </li>
         <li>
           <RouterLink to="/locations"
             class="cursor-pointer block py-2 pr-4 pl-3  hover:text-blue-800 rounded lg:bg-transparent lg:p-0"
-            aria-current="page">Treffpunkte</RouterLink>
+            aria-current="page">
+            <Text path="app.menu.locations" />
+          </RouterLink>
         </li>
       </ul>
     </div>
 
     <div class="flex items-center">
+
+      <LanguageDropdown />
+
       <RouterLink to="/settings"
         class="cursor-pointer text-gray-800 font-medium rounded-lg text-md px-4 lg:px-5 py-2 lg:py-2.5 -mr-4 hidden md:block"
         v-if="loggedin">⚙️</RouterLink>
@@ -39,16 +48,22 @@
 
       <RouterLink to="/login"
         class="cursor-pointer text-gray-800 hover:bg-gray-50 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 hidden md:block"
-        v-if="!loggedin">Login</RouterLink>
+        v-if="!loggedin">
+        <Text path="app.login" />
+      </RouterLink>
 
       <RouterLink to="/signup"
         class="cursor-pointer text-white bg-indigo-700 hover:bg-indigo-600 font-medium rounded-lg text-sm px-4 lg:px-5 py-2.5 lg:py-2.5 mr-2 hidden md:block"
-        v-if="!loggedin">Anmelden</RouterLink>
+        v-if="!loggedin">
+        <Text path="app.register" />
+      </RouterLink>
 
       <a @click="logout" v-if="loggedin"
-        class="cursor-pointer text-white bg-indigo-700 hover:bg-indigo-600 font-medium rounded-lg text-sm px-4 lg:px-5 py-2.5 lg:py-2.5 mr-2 hidden md:block">Logout</a>
+        class="cursor-pointer text-white bg-indigo-700 hover:bg-indigo-600 font-medium rounded-lg text-sm px-4 lg:px-5 py-2.5 lg:py-2.5 mr-2 hidden md:block">
+        <Text path="app.logout" />
+      </a>
 
-      <button class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100"
+      <button class="inline-flex items-center p-2 ml-1.5 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100"
         @click="showMobileMenu">
         <span class="sr-only">Menu</span>
         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -68,6 +83,7 @@
 import { RouterLink, useRouter } from 'vue-router'
 import useAuth from '../service/auth'
 import useApp from './../service/app'
+import LanguageDropdown from './LanguageDropdown.vue'
 
 const router = useRouter()
 
