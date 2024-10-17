@@ -13,8 +13,7 @@ const getUsers = async () => {
     return userResult
   }
   catch(error: any) {
-    const response = error.response.data
-    state.message = Array.isArray(response.message) ? response.message[0] : response.message
+    state.message = error.message
     throw error
   }
 }

@@ -150,7 +150,7 @@ const saveClicked = () => {
     doSignup(signUpData).then(() => {
       router.push({ path: '/user' })
     }).catch((error) => {
-      errorText.value = error
+      errorText.value = error.message
     })
   }
 }
