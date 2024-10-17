@@ -52,6 +52,12 @@
             </span>
           </button>
 
+          <button
+            class="cursor-pointer ml-0 ml-5 mt-1 rounded-md px-4 py-1.5 text-sm font-semibold shadow-sm text-black shadow-gray-300 hover:bg-gray-100"
+            @click="editCancel" v-if="editLocation">
+            <Text path="profile.location.cancel" />
+          </button>
+
           <LocationEdit @locationSelected="onLocationSelected" @locationSaved="onLocationSaved" :locationData="mapData"
             v-if="editLocation && isOwn" class="mb-10" />
         </div>
@@ -108,10 +114,12 @@ const loaded = ref(false)
 const mapData = ref<LocationData>()
 const notFound = ref()
 const editLocation = ref(false)
+const newLocationSelected = ref(false)
 
 const onLocationSelected = (location: LocationData) => {
   mapData.value = location
   notFound.value = (location === null)
+  newLocationSelected.value = true
 }
 
 const onLocationSaved = (locationData: LocationData) => {
@@ -124,6 +132,14 @@ const onLocationSaved = (locationData: LocationData) => {
 
 const editClicked = () => {
   editLocation.value = true
+  newLocationSelected.value = false
+}
+
+const editCancel = () => {
+  editLocation.value = false
+  if (newLocationSelected.value) {
+    initMapData(user.value)
+  }
 }
 
 const goBack = () => {
@@ -148,17 +164,21 @@ const loadUser = async (userId: string) => {
   try {
     user.value = await getUserById(userId)
 
-    if (user.value.country && user.value.location) {
-      mapData.value = {
-        country: user.value.country,
-        location: user.value.location
-      }
-    }
+    initMapData(user.value)
 
     if (user)
       loaded.value = true
   } catch {
 
+  }
+}
+
+const initMapData: any = (user: User) => {
+  if (user?.country && user.location) {
+    mapData.value = {
+      country: user.country,
+      location: user.location
+    }
   }
 }
 

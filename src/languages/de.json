@@ -58,6 +58,7 @@
       "search": "Suchen",
       "no_result": "Kein Ergebnis",
       "save": "Speichern",
+      "cancel": "Abbrechen",
       "enable_panning_hint": "Auf Karte tippen, um Verschieben zu aktivieren.",
       "disable_panning_hint": "Auf Karte tippen, um Verschieben zu deaktivieren.",
       "enable_zooming_hint": "Auf Karte klicken, um Zoomen zu aktivieren.",

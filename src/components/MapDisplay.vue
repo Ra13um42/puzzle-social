@@ -1,7 +1,7 @@
 <template>
   <div id="map" class="inline-block h-100 md:h-150 w-full mt-15 z-4 border-2 border-gray-400" v-if="showMap"></div>
 
-  <div class="mt-1.5 text-gray-700">
+  <div class="mt-1.5 text-gray-700" v-if="showMap">
     <div v-if="isMobile()">
       <Text path="profile.location.enable_panning_hint" v-if="!panEnabled" />
       <Text path="profile.location.disable_panning_hint" v-else />

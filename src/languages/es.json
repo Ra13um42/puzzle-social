@@ -58,6 +58,7 @@
       "search": "Search",
       "no_result": "No result",
       "save": "Save",
+      "cancel": "Cancel",
       "enable_panning_hint": "Tap on map to activate panning.",
       "disable_panning_hint": "Tap on map to disable panning.",
       "enable_zooming_hint": "Click on map to activate zooming.",
