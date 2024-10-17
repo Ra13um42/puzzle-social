@@ -1,22 +1,25 @@
 <template>
-  <div class="w-full mt-15 z-4">
-    <div class="text-right">
-      <button class="cursor-pointer px-4 md:px-5 py-1.5 md:py-2.25 rounded-md text-sm font-semibold hover:bg-gray-100"
-        :class="{ 'bg-gray-100': zoom === (i) }" v-for="i in range(2, 14)" :key="i" @click="setZoom(i)">
-        {{ i }}
-      </button>
-    </div>
+  <div v-if="showMap">
 
-    <div id="map" class="block h-100 md:h-150 w-full mt-1.5 border-2 border-gray-400" v-if="showMap"></div>
-
-    <div class="mt-1.5 text-gray-700" v-if="showMap">
-      <div v-if="isMobile()">
-        <Text path="profile.location.enable_panning_hint" v-if="!panEnabled" />
-        <Text path="profile.location.disable_panning_hint" v-else />
+    <div class="w-full mt-15 z-4">
+      <div class="text-right">
+        <button class="cursor-pointer px-4 md:px-5 py-1.5 md:py-2.25 rounded-md text-sm font-semibold hover:bg-gray-100"
+          :class="{ 'bg-gray-100': zoom === (i) }" v-for="i in range(2, 14)" :key="i" @click="setZoom(i)">
+          {{ i }}
+        </button>
       </div>
-      <div v-else>
-        <Text path="profile.location.enable_zooming_hint" v-if="!zoomEnabled" />
-        <Text path="profile.location.disable_zooming_hint" v-else />
+
+      <div id="map" class="block h-100 md:h-150 w-full mt-1.5 border-2 border-gray-400"></div>
+
+      <div class="mt-1.5 text-gray-700">
+        <div v-if="isMobile()">
+          <Text path="profile.location.enable_panning_hint" v-if="!panEnabled" />
+          <Text path="profile.location.disable_panning_hint" v-else />
+        </div>
+        <div v-else>
+          <Text path="profile.location.enable_zooming_hint" v-if="!zoomEnabled" />
+          <Text path="profile.location.disable_zooming_hint" v-else />
+        </div>
       </div>
     </div>
 
