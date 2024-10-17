@@ -71,6 +71,7 @@ export const routes = [
     {
       path: '/settings',
       name: 'settings',
+      meta: { requiresAuth: true },
       component: SettingsView
     },
   ]
