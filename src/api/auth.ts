@@ -1,4 +1,4 @@
-import axios from 'axios';
+import { get, post } from './http';
 
 export interface SignupData {
   name:string
@@ -26,16 +26,13 @@ export interface LoginResponse {
 }
 
 export function signup (data: SignupData) : Promise<SignupResponse> {
-  return axios.post<SignupResponse>('auth/signup/', data)
-    .then(response  => response.data)
+  return post<SignupResponse>('auth/signup/', data)
 }
 
 export function login (data: LoginData) : Promise<LoginResponse> {
-  return axios.post<LoginResponse>('auth/login/', data)
-    .then(response  => response.data)
+  return post<LoginResponse>('auth/login/', data)
 }
 
 export function checkAuth () : Promise<User> {
-  return axios.get<User>('auth/check/')
-    .then(response => response.data)
+  return get<User>('auth/check/')
 }

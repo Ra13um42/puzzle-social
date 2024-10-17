@@ -1,4 +1,4 @@
-import axios from 'axios';
+import { get, post, put, del } from './http';
 
 export interface UpdateLocationDto {
   location: Location
@@ -6,32 +6,29 @@ export interface UpdateLocationDto {
 }
 
 export function fetchUsers () : Promise<Array<User>> {
-  return axios.get<Array<User>>('users/')
-    .then(response  => response.data)
+  return get<Array<User>>('users/')
 }
 
 export function fetchUser (userId: string) : Promise<User> {
-  return axios.get<User>('users/' + userId)
-    .then(response  => response.data)
+  return get<User>('users/' + userId)
 }
 
 export function updateName (name: string) : Promise<void> {
-  return axios.put('users/me/name', { name: name})
-    .then(response  => response.data)
+  return put('users/me/name', { name: name})
 }
 
 export function fetchCount (): Promise<number> {
-  return axios.get('users/count').then(response => response.data)
+  return get('users/count')
 }
 
 export function updatePhoto (imageData: any): Promise<void> {
-  return axios.post('users/me/photo', imageData).then(response => response.data)
+  return post('users/me/photo', imageData)
 }
 
 export function updateLocation (locationData: UpdateLocationDto): Promise<void> {
-  return axios.put('users/me/location', locationData).then(response => response.data)
+  return put('users/me/location', locationData)
 }
 
 export function deleteUser (): Promise<void> {
-  return axios.delete('users/me/').then(response => response.data)
+  return del('users/me/')
 }

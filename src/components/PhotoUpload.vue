@@ -12,7 +12,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import axios from 'axios';
+import { postFormData } from '../api/http';
 
 let previewImageSrc = ref(null)
 
@@ -51,9 +51,9 @@ let save = () => {
   imageFormData.append('photo', image.value)
 
   if (props.url) {
-    axios.post(props.url, imageFormData).then(response => {
+    postFormData<string>(props.url, imageFormData).then(response => {
       previewImageSrc.value = null
-      emit('uploaded', response.data)
+      emit('uploaded', response)
     })
   }
 }

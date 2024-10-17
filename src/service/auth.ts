@@ -1,5 +1,5 @@
 import { reactive, toRefs } from "vue";
-import axios from 'axios';
+import { setAuthToken } from '../api/http';
 import { signup, type SignupData, type SignupResponse, login, type LoginResponse, checkAuth } from '../api/auth'
 
 const state = reactive({
@@ -18,9 +18,7 @@ const doSignup = async (data: SignupData) => {
     state.showButtons = false
   }
   catch(error: any) {
-    const response = error.response.data
-    const message = Array.isArray(response.message) ? response.message[0] : response.message
-    throw message
+    throw error
   }
 }
 
@@ -41,12 +39,12 @@ const setUser = (user: User) => {
 
 const setAccessToken = (token: string) => {
   localStorage.setItem('access_token', JSON.stringify(token))
-  axios.defaults.headers.common.Authorization = 'Bearer ' + token
+  setAuthToken(token)
 }
 
 const resetAccessToken = () => {
   localStorage.setItem('access_token', '')
-  axios.defaults.headers.common.Authorization = null
+  setAuthToken(null)
 }
 
 const doLogout = () => {
@@ -60,7 +58,7 @@ const doCheckAuth = async () => {
 
   if (tokenString) {
     const access_token = JSON.parse(tokenString)
-    axios.defaults.headers.common.Authorization = 'Bearer ' + access_token
+    setAuthToken(access_token)
   }
 
   try {
