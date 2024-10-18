@@ -30,6 +30,10 @@
 
     <div class="flex items-center">
 
+      <button class="inline h-[1.45rem] md:h-[1.65rem] ml-1.5 mr-2 md:mr-5 mt-.5 md:mt-1 cursor-pointer"
+        @click="toggleDark">toggle</button>
+
+
       <LanguageDropdown />
 
       <div class="hidden lg:flex items-center" v-if="loggedin">
@@ -81,7 +85,7 @@ import LanguageDropdown from './LanguageDropdown.vue'
 const router = useRouter()
 
 const { loggedin, doLogout, user } = useAuth()
-const { showMobileMenu } = useApp()
+const { showMobileMenu, toggleDark } = useApp()
 
 const logout = () => {
   doLogout()
