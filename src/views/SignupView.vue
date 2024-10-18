@@ -28,11 +28,9 @@
       </div>
 
       <div class="mt-9 flex items-center justify-center gap-x-6">
-        <button
-          class="rounded-xl bg-indigo-600 hover:bg-indigo-500 px-9 py-2.5 text-sm font-semibold text-white shadow-sm shadow-gray-300"
-          @click="nameOkClicked">
+        <Button color="indigo" @click="nameOkClicked">
           <Text path="signup.name_confirm_button" />
-        </button>
+        </Button>
       </div>
     </div>
 
@@ -73,11 +71,9 @@
       </div>
 
       <div class="mt-10 flex items-center justify-center gap-x-6">
-        <button
-          class="rounded-lg bg-indigo-600 px-6.3 py-2.5 text-sm font-semibold text-white shadow-sm shadow-gray-300 hover:bg-indigo-500 outline-none"
-          @click="saveClicked" ref="saveButton">
+        <Button color="indigo" @click="saveClicked" class="!px-5">
           <Text path="signup.create_account" />
-        </button>
+        </Button>
       </div>
 
     </div>
