@@ -25,47 +25,48 @@ const logoutClicked = () => {
         <button class="text-white text-3xl" @click="hideMobileMenu">&times;</button>
       </div>
 
-      <nav class="my-4 p-5 space-y-4">
-        <RouterLink to="/users" class="block text-black text-lg font-medium hover:text-indigo-600">
-          <Text path="app.menu.people" />
-        </RouterLink>
-        <RouterLink to="/events" class="block text-black text-lg font-medium hover:text-indigo-600">
-          <Text path="app.menu.events" />
-        </RouterLink>
-        <RouterLink to="/locations" class="block text-black text-lg font-medium hover:text-indigo-600">
-          <Text path="app.menu.locations" />
-        </RouterLink>
+      <nav class="grid grid-col my-4 p-5 space-y-4">
+        <Link to="/users">
+        <Text path="app.menu.people" />
+        </Link>
+        <Link to="/events">
+        <Text path="app.menu.events" />
+        </Link>
+        <Link to="/locations">
+        <Text path="app.menu.locations" />
+        </Link>
       </nav>
+
       <div class="border-t-2 border-gray-300 p-5 ">
 
-        <RouterLink to="/user" class="cursor-pointer text-gray-800 font-medium rounded-lg text-xl" v-if="loggedin">{{
-          user.name }}</RouterLink>
-
-        <RouterLink to="/login"
-          class="cursor-pointer text-gray-800 hover:bg-gray-50 font-medium rounded-lg text-md px-2 py-2 2.5 mr-4"
-          v-if="!loggedin">
+        <Button color="transparent" to="/login" class="!text-[1rem] !px-2 mr-4" v-if="!loggedin">
           <Text path="app.login" />
-        </RouterLink>
+        </Button>
 
-        <RouterLink to="/signup"
-          class="cursor-pointer text-white bg-indigo-700 hover:bg-indigo-600 font-medium rounded-lg text-md px-5 py-2.5 mr-2"
-          v-if="!loggedin">
+        <Button color="indigo" to="/signup" class="!text-[1rem] !px-5 mr-4" v-if="!loggedin">
           <Text path="app.signup" />
-        </RouterLink>
+        </Button>
 
-        <a @click="logoutClicked" v-if="loggedin"
-          class="cursor-pointer text-white bg-indigo-700 hover:bg-indigo-600 font-medium rounded-lg text-md px-4 py-2.5 ml-6 mr-2">
+
+        <Button to="/user" color="transparent" class="!px-1 !text-[1rem]" v-if="loggedin">
+          {{ user.name }}
+        </Button>
+
+        <Button color="indigo" @click="logoutClicked" class="!px-6.5 ml-6 mr-2" v-if="loggedin">
           <Text path="app.logout" />
-        </a>
+        </Button>
 
-        <RouterLink to="/user" v-if="loggedin" class="block text-black text-lg font-medium hover:text-indigo-600 mt-12">
+        <nav class="grid grid-col space-y-4 mt-12">
+          <Link to="/user" class="" v-if="loggedin">
           <Text path="app.your_profile" />
-        </RouterLink>
+          </Link>
 
-        <RouterLink to="/settings" v-if="loggedin"
-          class="block text-black text-lg font-medium hover:text-indigo-600 py-4">
+          <Link to="/settings" class="mt-12" v-if="loggedin">
           <Text path="app.settings" />
-        </RouterLink>
+          </Link>
+        </nav>
+
+
       </div>
     </div>
   </div>

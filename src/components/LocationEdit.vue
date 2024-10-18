@@ -35,17 +35,14 @@
         class="px-3 py-[0.45rem] md:py-1.5 border-1 shadow-sm border-gray-200 outline-none rounded-md text-md w-full md:w-60 text-black placeholder-text-md placeholder-text-gray-400"
         @keydown.enter="citySearch">
 
-      <button
-        class="cursor-pointer ml-0 md:ml-5 mt-5 md:mt-3 rounded-md bg-white px-6 py-2.25 text-sm font-semibold text-black shadow-sm shadow-gray-300 hover:bg-gray-100"
-        @click="citySearch">
+      <Button color="white" @click="citySearch" class="!px-6 !py-2.25 ml-0 md:ml-5 mt-5 md:mt-0">
         <Text path="profile.location.search" />
-      </button>
+      </Button>
 
-      <button
-        class="cursor-pointer ml-0 ml-4 md:ml-5 mt-5 md:mt-3 rounded-md bg-indigo-700 px-6 py-2.25 text-sm font-semibold text-white shadow-sm shadow-gray-300 hover:bg-indigo-600"
-        @click="saveClicked" v-if="location_result">
+      <Button color="indigo" @click="saveClicked" class="!px-6 !py-2.25 ml-4 md:ml-5" v-if="location_result">
         <Text path="profile.location.save" />
-      </button>
+      </Button>
+
     </div>
 
   </div>

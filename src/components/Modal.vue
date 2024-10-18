@@ -39,16 +39,12 @@ const yesClicked = () => {
           </button>
 
           <div v-else>
-            <button
-              class="rounded-md bg-indigo-600 px-9 py-2.25 text-sm font-semibold text-white shadow-sm shadow-gray-300 hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
-              @click="yesClicked">
+            <Button color="indigo" @click="yesClicked" class="mt-1">
               <Text path="app.yes" />
-            </button>
-            <button
-              class="rounded-md bg-white px-7 ml-4 py-2.25 text-sm font-semibold text-black shadow-sm shadow-gray-300 hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
-              @click="hideModal">
+            </Button>
+            <Button color="white" @click="hideModal" class="ml-4 mt-1">
               <Text path="app.cancel" />
-            </button>
+            </Button>
           </div>
         </div>
       </div>

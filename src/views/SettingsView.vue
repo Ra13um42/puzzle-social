@@ -10,12 +10,10 @@
     <p class="block mt-22 text-2xl leading-8 text-gray-800">
       <Text path="settings.delete_account.title"></Text>
     </p>
-    <button
-      class="cursor-pointer ml-0 mt-4 rounded-md bg-red-700 px-6 py-2.25 text-sm font-semibold text-white shadow-sm shadow-gray-300 hover:bg-red-600"
-      @click="deleteAccountClick">
-      <Text path="settings.delete_account.button" />
-    </button>
 
+    <Button color="red" @click="deleteAccountClick" class="mt-4 !px-6.5">
+      <Text path="settings.delete_account.button" />
+    </Button>
 
     <p class="block mt-22 text-2xl leading-8 text-gray-800">
       <Text path="settings.language" />

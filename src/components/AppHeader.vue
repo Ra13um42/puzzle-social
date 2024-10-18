@@ -11,25 +11,19 @@
     <div class="hidden lg:flex w-full lg:w-auto justify-between items-center">
       <ul class="flex flex-col lg:flex-row mt-4 lg:mt-0 lg:space-x-8 font-medium">
         <li>
-          <RouterLink to="/users"
-            class="cursor-pointer block py-2 pr-4 pl-3 hover:text-blue-800 rounded lg:bg-transparent lg:p-0"
-            aria-current="page">
-            <Text path="app.menu.people" />
-          </RouterLink>
+          <Link to="/users">
+          <Text path="app.menu.people" />
+          </Link>
         </li>
         <li>
-          <RouterLink to="/events"
-            class="cursor-pointer block py-2 pr-4 pl-3 hover:text-blue-800 rounded lg:bg-transparent lg:p-0"
-            aria-current="page">
-            <Text path="app.menu.events" />
-          </RouterLink>
+          <Link to="/events">
+          <Text path="app.menu.events" />
+          </Link>
         </li>
         <li>
-          <RouterLink to="/locations"
-            class="cursor-pointer block py-2 pr-4 pl-3  hover:text-blue-800 rounded lg:bg-transparent lg:p-0"
-            aria-current="page">
-            <Text path="app.menu.locations" />
-          </RouterLink>
+          <Link to="/locations">
+          <Text path="app.menu.locations" />
+          </Link>
         </li>
       </ul>
     </div>
@@ -38,40 +32,39 @@
 
       <LanguageDropdown />
 
-      <RouterLink to="/settings"
-        class="cursor-pointer text-gray-800 font-medium rounded-lg text-md px-4 lg:px-5 py-2 lg:py-2.5 -mr-4 hidden md:block"
-        v-if="loggedin">⚙️</RouterLink>
+      <div class="hidden lg:flex items-center" v-if="loggedin">
+        <Button to="/settings" color="transparent" class="!px-4 !text-[1rem]">
+          ⚙️
+        </Button>
 
-      <RouterLink to="/user"
-        class="cursor-pointer text-gray-800 font-medium rounded-lg text-md px-4 lg:px-5 py-2 lg:py-2.5 mr-2 hidden md:block"
-        v-if="loggedin">{{ user.name }}</RouterLink>
+        <Button to="/user" color="transparent" class="!text-[1rem]">
+          {{ user.name }}
+        </Button>
 
-      <RouterLink to="/login"
-        class="cursor-pointer text-gray-800 hover:bg-gray-50 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 hidden md:block"
-        v-if="!loggedin">
-        <Text path="app.login" />
-      </RouterLink>
+        <Button color="indigo" @click="logout" class="!px-6.5">
+          <Text path="app.logout" />
+        </Button>
+      </div>
 
-      <RouterLink to="/signup"
-        class="cursor-pointer text-white bg-indigo-700 hover:bg-indigo-600 font-medium rounded-lg text-sm px-4 lg:px-5 py-2.5 lg:py-2.5 mr-2 hidden md:block"
-        v-if="!loggedin">
-        <Text path="app.register" />
-      </RouterLink>
+      <div class="hidden lg:flex" v-if="!loggedin">
+        <Button to="/login" color="transparent">
+          <Text path="app.login" />
+        </Button>
 
-      <a @click="logout" v-if="loggedin"
-        class="cursor-pointer text-white bg-indigo-700 hover:bg-indigo-600 font-medium rounded-lg text-sm px-4 lg:px-5 py-2.5 lg:py-2.5 mr-2 hidden md:block">
-        <Text path="app.logout" />
-      </a>
+        <Button to="/signup" color="indigo" class="!px-5">
+          <Text path="app.register" />
+        </Button>
+      </div>
 
-      <button class="inline-flex items-center p-2 ml-1.5 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100"
-        @click="showMobileMenu">
-        <span class="sr-only">Menu</span>
-        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+      <Button color="transparent" @click="showMobileMenu" class="block lg:hidden !px-6 -mr-4">
+        <svg class="w-6 h-6 text-gray-500 -mt-.5" fill="currentColor" viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd"
             d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
             clip-rule="evenodd"></path>
         </svg>
-      </button>
+      </Button>
+
     </div>
 
   </div>

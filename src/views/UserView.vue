@@ -40,23 +40,20 @@
           <Text path="profile.location.title" />
         </span>
 
-        <div class="inline" v-if="isOwn">
-          <button
-            class="cursor-pointer ml-0 ml-5 mt-1 rounded-md px-4 py-1.5 text-sm font-semibold shadow-sm text-black shadow-gray-300 hover:bg-gray-100"
-            @click="editClicked" v-if="!editLocation && isOwn">
+        <div class="inline mt-2 ml-5" v-if="isOwn">
+
+          <Button color="white" size="small" @click="editClicked" v-if="!editLocation && isOwn">
             <span v-if="!user?.location">
               <Text path="profile.location.set" />
             </span>
             <span v-else>
               <Text path="profile.location.change" />
             </span>
-          </button>
+          </Button>
 
-          <button
-            class="cursor-pointer ml-0 ml-5 mt-1 rounded-md px-4 py-1.5 text-sm font-semibold shadow-sm text-black shadow-gray-300 hover:bg-gray-100"
-            @click="editCancel" v-if="editLocation">
+          <Button color="white" size="small" @click="editCancel" v-if="editLocation">
             <Text path="profile.location.cancel" />
-          </button>
+          </Button>
 
           <LocationEdit @locationSelected="onLocationSelected" @locationSaved="onLocationSaved" :locationData="mapData"
             v-if="editLocation && isOwn" class="mb-10" />
@@ -78,11 +75,9 @@
       </div>
 
       <div class="flex items-center justify-center gap-x-6 mt-12 md:mt-19 pb-24">
-        <button
-          class="cursor-pointer mt-3 rounded-md bg-white px-7.5 py-2.25 text-sm font-semibold text-black shadow-sm shadow-gray-300 hover:bg-gray-100"
-          aria-current="page" v-if="route.params.id" @click="goBack">
+        <Button color="white" @click="goBack" v-if="route.params.id">
           <Text path="profile.back" />
-        </button>
+        </Button>
       </div>
     </div>
   </div>

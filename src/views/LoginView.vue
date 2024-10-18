@@ -42,11 +42,9 @@
     </div>
 
     <div class="flex items-center justify-center gap-x-6 mt-8">
-      <button
-        class="rounded-xl bg-indigo-600 px-8 py-2.5 text-sm font-semibold text-white shadow-sm shadow-gray-300 hover:bg-indigo-500 outline-none"
-        @click="loginClicked" ref="saveButton">
+      <Button color="indigo" @click="loginClicked">
         <Text path="login.button" />
-      </button>
+      </Button>
     </div>
 
     <div class="h-20"></div>
