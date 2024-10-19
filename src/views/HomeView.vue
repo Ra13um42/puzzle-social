@@ -29,8 +29,8 @@
 
 <script setup lang="ts">
 import useAuth from '../service/auth'
-import AppLogo from '../components/AppLogo.vue'
-import UsersDisplay from '../components/UsersDisplay.vue'
+import AppLogo from '../components/app/AppLogo.vue'
+import UsersDisplay from '../components/user/UsersDisplay.vue'
 
 const { loggedin } = useAuth()
 

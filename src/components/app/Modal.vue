@@ -1,17 +1,3 @@
-<script setup lang="ts">
-import useApp from './../service/app'
-
-const { hideModal, modalVisible, modalText, yesNo, callback } = useApp()
-
-const yesClicked = () => {
-  if (callback.value) {
-    callback.value()
-  }
-  hideModal()
-}
-</script>
-
-
 <template>
   <div v-if="modalVisible"
     class="fixed left-0 top-0 bg-gray-200 bg-opacity-50 h-screen w-screen flex items-center justify-center">
@@ -32,11 +18,10 @@ const yesClicked = () => {
           <br>
           <p>{{ modalText }}</p>
           <div class="h-10"></div>
-          <button
-            class="rounded-md bg-indigo-600 px-9 py-2.25 text-sm font-semibold text-white shadow-sm shadow-gray-300 hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
-            @click="hideModal" v-if="!yesNo">
+
+          <Button color="indigo" @click="hideModal" class="mt-1" v-if="!modalYesNo">
             <Text path="app.ok" />
-          </button>
+          </Button>
 
           <div v-else>
             <Button color="indigo" @click="yesClicked" class="mt-1">
@@ -51,3 +36,17 @@ const yesClicked = () => {
     </div>
   </div>
 </template>
+
+
+<script setup lang="ts">
+import useApp from './../../service/app'
+
+const { hideModal, modalVisible, modalText, modalYesNo, modalCallback } = useApp()
+
+const yesClicked = () => {
+  if (modalCallback.value) {
+    modalCallback.value()
+  }
+  hideModal()
+}
+</script>

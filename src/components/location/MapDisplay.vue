@@ -29,10 +29,10 @@
 
 
 <script setup lang="ts">
-import { watch, ref, nextTick } from 'vue';
+import { watch, ref, nextTick } from 'vue'
 import L from 'leaflet'
-import 'leaflet/dist/leaflet.css';
-import isMobile from 'is-mobile';
+import 'leaflet/dist/leaflet.css'
+import isMobile from 'is-mobile'
 
 const props = defineProps<{ locationData: LocationData | undefined }>()
 
@@ -84,41 +84,41 @@ const createMap = async (location: OsmLocation) => {
 
   // make polygon transparent when zooming in
   map.on('zoomend', function () {
-    var currentZoom = map.getZoom();
+    var currentZoom = map.getZoom()
     zoom.value = currentZoom
     if (currentZoom >= 15) {
-      poly.setStyle({ fillOpacity: 0 });
+      poly.setStyle({ fillOpacity: 0 })
     } else if (currentZoom >= 14) {
-      poly.setStyle({ fillOpacity: 0.03 });
+      poly.setStyle({ fillOpacity: 0.03 })
     } else if (currentZoom >= 13) {
-      poly.setStyle({ fillOpacity: 0.08 });
+      poly.setStyle({ fillOpacity: 0.08 })
     } else {
-      poly.setStyle({ fillOpacity: 0.15 });
+      poly.setStyle({ fillOpacity: 0.15 })
     }
-  });
+  })
 
   // prevent unintentional dragging on mobile
   if (isMobile()) {
-    map.dragging.disable();
+    map.dragging.disable()
 
     map.on('click', function (e: any) {
       togglePanning()
-    });
+    })
     map.on('zoomend', function (e: any) {
       panEnabled.value = true
-      map.dragging.enable();
-    });
+      map.dragging.enable()
+    })
   } else {
     // prevent unintentional zooming on desktop
-    map.scrollWheelZoom.disable();
+    map.scrollWheelZoom.disable()
 
     map.on('click', function (e: any) {
       toggleZooming()
-    });
+    })
     map.on('move', function (e: any) {
       zoomEnabled.value = true
-      map.scrollWheelZoom.enable();
-    });
+      map.scrollWheelZoom.enable()
+    })
 
   }
 }
@@ -131,27 +131,27 @@ async function fitBounds(bounds: any) {
     })
     map.once('moveend', () => {
       zoom.value = map.getZoom()
-      resolve();
-    });
-  });
+      resolve()
+    })
+  })
 }
 
 function togglePanning() {
   if (panEnabled.value) {
-    map.dragging.disable();
+    map.dragging.disable()
   } else {
-    map.dragging.enable();
+    map.dragging.enable()
   }
-  panEnabled.value = !panEnabled.value;
+  panEnabled.value = !panEnabled.value
 }
 
 function toggleZooming() {
   if (zoomEnabled.value) {
-    map.scrollWheelZoom.disable();
+    map.scrollWheelZoom.disable()
   } else {
-    map.scrollWheelZoom.enable();
+    map.scrollWheelZoom.enable()
   }
-  zoomEnabled.value = !zoomEnabled.value;
+  zoomEnabled.value = !zoomEnabled.value
 }
 
 const getCoordinates = (location: any): any => {
@@ -178,7 +178,7 @@ const removeMap = () => {
 }
 
 const range = (start: number, end: number) => {
-  return Array.from({ length: end - start + 1 }, (_, index) => start + index);
+  return Array.from({ length: end - start + 1 }, (_, index) => start + index)
 }
 
 </script>

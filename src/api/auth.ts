@@ -1,13 +1,9 @@
-import { get, post } from './http';
+import { get, post } from './http'
 
 export interface SignupData {
   name:string
   email: string
   password: string
-}
-
-export interface SignupAnonymData {
-  name:string
 }
 
 export interface SignupResponse {

@@ -30,12 +30,14 @@
 <script setup lang="ts">
 import { onBeforeMount } from 'vue'
 import { RouterView } from 'vue-router'
+
 import { transitionOut, transitionIn } from './modules/transition.module'
 import useLanguage from './service/language'
-import AppHeader from './components/AppHeader.vue'
-import AppFooter from './components/AppFooter.vue'
-import MobileMenu from './components/MobileMenu.vue'
-import Modal from './components/Modal.vue'
+
+import AppHeader from './components/app/AppHeader.vue'
+import AppFooter from './components/app/AppFooter.vue'
+import MobileMenu from './components/app/MobileMenu.vue'
+import Modal from './components/app/Modal.vue'
 
 const { initialize: initializeLanguage } = useLanguage()
 

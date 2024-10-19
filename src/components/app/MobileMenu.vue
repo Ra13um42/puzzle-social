@@ -1,18 +1,3 @@
-<script setup lang="ts">
-import { useRouter } from 'vue-router'
-import useAuth from '../service/auth'
-import useApp from './../service/app'
-
-const router = useRouter()
-const { mobileMenuVisible, hideMobileMenu } = useApp()
-const { loggedin, user, doLogout } = useAuth()
-
-const logoutClicked = () => {
-  doLogout()
-  router.push({ path: '/' })
-}
-</script>
-
 <template>
   <div v-if="mobileMenuVisible" class="hidden inset-0 z-50 bg-gray-200 bg-opacity-50 flex items-center justify-center"
     :class="{ 'fixed': mobileMenuVisible }">
@@ -26,7 +11,7 @@ const logoutClicked = () => {
       </div>
 
       <nav class="grid grid-col my-4 p-5 space-y-4">
-        <Link to="/users">
+        <Link to="/people">
         <Text path="app.menu.people" />
         </Link>
         <Link to="/events">
@@ -71,3 +56,18 @@ const logoutClicked = () => {
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import { useRouter } from 'vue-router'
+import useAuth from '../../service/auth'
+import useApp from '../../service/app'
+
+const router = useRouter()
+const { mobileMenuVisible, hideMobileMenu } = useApp()
+const { loggedin, user, doLogout } = useAuth()
+
+const logoutClicked = () => {
+  doLogout()
+  router.push({ path: '/' })
+}
+</script>
