@@ -1,18 +1,18 @@
-import { reactive, toRefs, ref } from "vue";
+import { reactive, toRefs, ref } from "vue"
 
 const state = reactive({
   modalVisible: false,
   modalText: '',
+  modalYesNo: false,
+  modalCallback: ref<(() => void) | undefined>(undefined),
   mobileMenuVisible: false,
-  yesNo: false,
-  callback: ref<(() => void) | undefined>(undefined),
 })
 
 const showModal = async (text: string, yesNo: boolean = false, callback?: () => void) => {
   state.modalText = text
   state.modalVisible = true
-  state.yesNo = yesNo
-  state.callback = callback
+  state.modalYesNo = yesNo
+  state.modalCallback = callback
 }
 
 const hideModal = async () => {

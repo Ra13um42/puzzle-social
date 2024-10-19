@@ -24,13 +24,12 @@
     </div>
   </div>
 
-
 </template>
 
 
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
-import useLanguage from './../service/language'
+import { ref, onMounted } from "vue"
+import useLanguage from '../../service/language'
 
 const { setLanguage, languages, language } = useLanguage()
 

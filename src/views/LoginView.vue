@@ -58,7 +58,7 @@
 import { ref, onMounted, useTemplateRef } from 'vue'
 import { useRouter } from 'vue-router'
 import useAuth from '../service/auth'
-import useLanguage from './../service/language'
+import useLanguage from '../service/language'
 
 const router = useRouter()
 const { doLogin } = useAuth()
@@ -73,10 +73,8 @@ const passwordInput = useTemplateRef('passwordInput')
 const isError = ref(false)
 
 onMounted(() => {
-  setTimeout(() => {
-    if (emailInput.value)
-      emailInput.value.focus()
-  }, 30);
+  if (emailInput.value)
+    emailInput.value.focus()
 })
 
 const saveClicked = () => {

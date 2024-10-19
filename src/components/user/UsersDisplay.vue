@@ -1,5 +1,4 @@
 <template>
-
   <div class="container mx-auto my-40 max-w-screen-xl">
 
     <div class="w-full hidden text-left text-[1.5rem] text-gray-600 ">Neu auf Puzzle</div>
@@ -15,13 +14,12 @@
     </div>
 
   </div>
-
 </template>
 
 
 <script setup lang="ts">
 import { onBeforeMount } from 'vue'
-import useUsers from '../service/user'
+import useUsers from '../../service/user'
 
 const { users, getUsers } = useUsers()
 

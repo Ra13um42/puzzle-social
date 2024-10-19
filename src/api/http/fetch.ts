@@ -3,17 +3,17 @@ import { ApiError } from "./error"
 let authToken: string | null = null
 
 export function setAuthToken(token: string | null) {
-  authToken = token;
+  authToken = token
 }
 
 let baseURL = '/api/'
 
 export async function request<T>(url: string, options: RequestInit): Promise<T> {
   try {
-    const headers: HeadersInit = {};
+    const headers: HeadersInit = {}
 
     if (authToken) {
-      headers['Authorization'] = `Bearer ${authToken}`;
+      headers['Authorization'] = `Bearer ${authToken}`
     }
 
     const response = await fetch(baseURL + url, {
@@ -25,9 +25,9 @@ export async function request<T>(url: string, options: RequestInit): Promise<T> 
     })
 
     if (response.ok) {
-      const text = await response.text();
+      const text = await response.text()
 
-      const isJson = response.headers.get("content-type")?.includes("application/json");
+      const isJson = response.headers.get("content-type")?.includes("application/json")
 
       if (isJson) {
         return text ? JSON.parse(text) as T : {} as T
@@ -48,6 +48,6 @@ export async function request<T>(url: string, options: RequestInit): Promise<T> 
       // Network errors
       console.error(`Network error: ${error.message}`)
     }
-    throw error;
+    throw error
   }
 }

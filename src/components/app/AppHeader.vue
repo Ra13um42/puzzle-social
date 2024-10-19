@@ -11,7 +11,7 @@
     <div class="hidden lg:flex w-full lg:w-auto justify-between items-center">
       <ul class="flex flex-col lg:flex-row mt-4 lg:mt-0 lg:space-x-8 font-medium">
         <li>
-          <Link to="/users">
+          <Link to="/people">
           <Text path="app.menu.people" />
           </Link>
         </li>
@@ -74,9 +74,9 @@
 
 <script setup lang="ts">
 import { RouterLink, useRouter } from 'vue-router'
-import useAuth from '../service/auth'
-import useApp from './../service/app'
-import LanguageDropdown from './LanguageDropdown.vue'
+import useAuth from '../../service/auth'
+import useApp from './../../service/app'
+import LanguageDropdown from '../language/LanguageDropdown.vue'
 
 const router = useRouter()
 

@@ -91,9 +91,9 @@ import { useRoute, useRouter } from 'vue-router'
 import useAuth from '../service/auth'
 import useUser from '../service/user'
 
-import PhotoUpload from '../components/PhotoUpload.vue'
-import MapDisplay from '../components/MapDisplay.vue'
-import LocationEdit from '../components/LocationEdit.vue'
+import PhotoUpload from '../components/user/PhotoUpload.vue'
+import MapDisplay from '../components/location/MapDisplay.vue'
+import LocationEdit from '../components/location/LocationEdit.vue'
 
 const router = useRouter()
 const route = useRoute()
