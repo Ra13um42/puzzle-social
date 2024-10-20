@@ -51,8 +51,8 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted, useTemplateRef, nextTick } from 'vue'
-import useUser from '../service/user'
-import useLanguage from './../service/language'
+import useUser from '../../service/user'
+import useLanguage from '../../service/language'
 import { countries } from 'countries-list'
 
 const emit = defineEmits(['locationSelected', 'locationSaved'])
@@ -65,7 +65,7 @@ const { text } = useLanguage()
 const countryArray = Object.entries(countries).map(([code, details]) => ({
   code,
   ...details
-}));
+}))
 
 const selectedCountry = ref<Country>()
 const cityQuery = ref('')
@@ -75,7 +75,7 @@ const dropdown_list = useTemplateRef('dropdown_list')
 const filter_input = useTemplateRef('filter_input')
 const city_input = useTemplateRef('city_input')
 
-let isOpen = ref(false);
+let isOpen = ref(false)
 let filter = ref('')
 
 
@@ -98,7 +98,7 @@ const onContrySelected = (country: any) => {
 }
 
 async function toggleDropdown() {
-  isOpen.value = !isOpen.value;
+  isOpen.value = !isOpen.value
   filter.value = ''
   await nextTick()
   if (filter_input.value) {
@@ -111,7 +111,7 @@ const citySearch = () => {
     .then(response => response.json())
     .then(data => {
       if (data.length > 0) {
-        location_result.value = data[0];
+        location_result.value = data[0]
 
         let locationData = {
           location: location_result.value,

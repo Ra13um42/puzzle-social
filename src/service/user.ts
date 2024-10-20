@@ -1,4 +1,4 @@
-import { reactive, toRefs } from "vue";
+import { reactive, toRefs } from "vue"
 import { fetchUsers, fetchUser, updateName, updateLocation, type UpdateLocationDto, deleteUser } from '../api/user'
 
 const state = reactive({

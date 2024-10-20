@@ -1,4 +1,4 @@
-import { get, post, put, del } from './http';
+import { get, post, put, del } from './http'
 
 export interface UpdateLocationDto {
   location: Location

@@ -6,13 +6,12 @@
     </label>
     <span class="block mt-4" v-if="message">{{ message }}</span>
   </div>
-
 </template>
 
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { postFormData } from '../api/http';
+import { postFormData } from '../../api/http'
 
 let previewImageSrc = ref(null)
 

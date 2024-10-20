@@ -1,6 +1,6 @@
 import { request } from "./fetch"
-export { setAuthToken } from "./fetch";
-export { ApiError } from "./error";
+export { setAuthToken } from "./fetch"
+export { ApiError } from "./error"
 
 
 export function get<T>(url: string): Promise<T> {

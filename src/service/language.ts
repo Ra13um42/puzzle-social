@@ -1,4 +1,4 @@
-import { reactive, toRefs, computed } from "vue";
+import { reactive, toRefs, computed } from "vue"
 import languages from '../languages/languages'
 import en from '../languages/en.json'
 
@@ -15,7 +15,7 @@ const fetchTranslations = async () => {
 }
 
 const getText = (path: string) : string => {
-  return path.split('.').reduce((acc: any, key) => acc?.[key], state.texts) ?? '';
+  return path.split('.').reduce((acc: any, key) => acc?.[key], state.texts) ?? ''
 }
 
 let text = (path: string) => {
