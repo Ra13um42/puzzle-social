@@ -1,6 +1,6 @@
 <template>
   <div class="flex">
-    <label class="block mt-9 py-2 px-4 bg-gray-100 cursor-pointer text-center rounded-md">
+    <label class="block mt-9 py-2 px-4 bg-gray-100 dark:bg-gray-900 cursor-pointer text-center rounded-md">
       <input id="file-input" ref="fileInput" class="hidden" type="file" @change="imageSelected($event)" />
       <Text path="profile.change_image" />
     </label>

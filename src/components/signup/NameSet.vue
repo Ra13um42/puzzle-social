@@ -1,16 +1,16 @@
 <template>
   <div>
-    <h1 class="text-5xl font-bold tracking-tight text-gray-900 md:text-[4.2rem]">
+    <h1 class="text-5xl font-bold tracking-tight md:text-[4.2rem]">
       <Text path="app.title" />
     </h1>
 
-    <p class="mt-5 text-xl leading-8 text-gray-600">
+    <p class="mt-5 text-xl leading-8 text-sub dark:text-sub-dark">
       <Text path="signup.name_question" />
     </p>
 
     <div class="mt-8 flex items-center justify-center px-6 lg:px-5 py-1 gap-x-6">
       <input :placeholder="text('signup.name')"
-        class="bg-indigo-50 px-3 py-[0.4rem] md:py-1.5 w-full md:w-60 border-gray-700 outline-none rounded-md text-lg placeholder-gray-500 md:placeholder-opacity-100 border-red-400"
+        class="bg-indigo-50 dark:bg-gray-800 px-3 py-[0.4rem] md:py-1.5 w-full md:w-60 border-gray-700 outline-none rounded-md text-lg placeholder-gray-500 border-red-400"
         :class="{ 'border-2': nameError }" v-model="signupData.name" v-on:keyup.enter="okClicked" ref="nameInput"
         type="text" />
     </div>

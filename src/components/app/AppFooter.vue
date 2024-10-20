@@ -6,12 +6,12 @@
         <Text path="app.footer.copyright" />
       </li>
       <li>
-        <RouterLink to="/terms" class="text-gray-800 hover:text-blue-800">
+        <RouterLink to="/terms" class="text-sub dark:text-sub-dark hover:text-blue-800">
           <Text path="app.footer.terms" />
         </RouterLink>
       </li>
       <li>
-        <RouterLink to="/privacy" class="text-gray-800 hover:text-blue-800">
+        <RouterLink to="/privacy" class="text-sub dark:text-sub-dark hover:text-blue-800">
           <Text path="app.footer.privacy" />
         </RouterLink>
       </li>

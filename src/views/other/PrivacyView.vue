@@ -2,7 +2,7 @@
   <div class="container mx-auto max-w-screen-xl mt-17 mb-60">
     <h1 class="text-4xl font-bold text-center mb-6">Privacy Policy</h1>
 
-    <p class="mb-4 text-sm text-gray-600">Last updated: October 12, 2024</p>
+    <p class="mb-4 text-sm text-sub dark:text-sub-dark">Last updated: October 12, 2024</p>
 
     <p class="mb-4">
       At Puzzle Social, your privacy is important to us. This Privacy Policy explains how we collect, use, and protect
@@ -66,7 +66,7 @@
     <h2 class="text-2xl font-semibold mt-6 mb-3">8. Contact Us</h2>
     <p class="mb-4">
       If you have any questions about this Privacy Policy, please contact us at <a href="mailto:info@puzzle.social"
-        class="text-blue-600 hover:underline">info@puzzle.social</a>.
+        class="text-blue-600 hover:underline">info@puzzle.social</a>
     </p>
   </div>
 

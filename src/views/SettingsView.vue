@@ -1,13 +1,13 @@
 <template>
   <div class="py-10 lg:py-15 max-w-screen-lg mx-auto">
-    <h1 class="text-4xl font-bold tracking-tight text-gray-900">
+    <h1 class="text-4xl font-bold tracking-tight">
       <Text path="settings.title" />
     </h1>
-    <p class="mt-6 text-lg leading-8 text-gray-600">
+    <p class="mt-6 text-lg leading-8 text-sub dark:text-sub-dark">
       <Text path="settings.subtitle" />
     </p>
 
-    <p class="block mt-22 text-2xl leading-8 text-gray-800">
+    <p class="block mt-22 text-2xl leading-8">
       <Text path="settings.delete_account.title"></Text>
     </p>
 
@@ -15,11 +15,11 @@
       <Text path="settings.delete_account.button" />
     </Button>
 
-    <p class="block mt-22 text-2xl leading-8 text-gray-800">
+    <p class="block mt-22 text-2xl leading-8">
       <Text path="settings.language" />
     </p>
     <select placeholder="Sprache auswählen"
-      class="px-3 py-[0.45rem] md:py-1.5 mt-7 border-gray-500 outline-none rounded-md cursor-pointer text-lg w-full md:w-60 bg-indigo-50 text-black"
+      class="px-3 py-[0.45rem] md:py-1.5 mt-7 border-gray-500 outline-none rounded-md cursor-pointer text-lg w-full md:w-60 bg-indigo-50 dark:bg-gray-800"
       :value="language.code" @change="onLanguageSelected">
       <option v-for="option in languages" :value="option.code">
         {{ option.name }}

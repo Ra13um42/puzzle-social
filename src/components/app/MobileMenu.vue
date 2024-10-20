@@ -1,9 +1,9 @@
 <template>
   <div v-if="mobileMenuVisible" class="hidden inset-0 z-50 bg-gray-200 bg-opacity-50 flex items-center justify-center"
     :class="{ 'fixed': mobileMenuVisible }">
-    <div class="fixed left-0 top-0 bottom-0 z-50 w-80 bg-white shadow-lg">
+    <div class="fixed left-0 top-0 bottom-0 z-50 w-80 bg-white dark:bg-black shadow-lg">
 
-      <div class="bg-red-600  text-white py-2 px-4 flex justify-between items-center">
+      <div class="bg-red-600 dark:bg-indigo-900 text-white py-2 px-4 flex justify-between items-center">
         <RouterLink to="/" class="text-[1.5rem] font-semibold">
           <Text path="app.title" />
         </RouterLink>

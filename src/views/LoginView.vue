@@ -1,7 +1,7 @@
 <template>
   <div class="py-3 lg:py-34 text-center">
 
-    <h1 class="text-gray-900 text-5xl md:text-[4.2rem] font-bold tracking-tight">
+    <h1 class="text-5xl md:text-[4.2rem] font-bold tracking-tight">
       <Text path="login.title" />
     </h1>
 
@@ -10,25 +10,25 @@
         <tbody>
           <tr>
             <td class="hidden md:table-cell p-2">
-              <span class="text-lg text-gray-700">
+              <span class="text-lg text-sub dark:text-sub-dark">
                 <Text path="login.email" />
               </span>
             </td>
             <td class="table-cell p-2">
               <input :placeholder="text('login.email')"
-                class="px-3 py-[0.45rem] md:py-1.5 border-gray-500 outline-none rounded-md text-lg w-full md:w-60 bg-indigo-50"
+                class="px-3 py-[0.45rem] md:py-1.5 border-gray-500 outline-none rounded-md text-lg w-full md:w-60 bg-indigo-50 dark:bg-gray-800"
                 v-model="email" v-on:keyup.enter="saveClicked" ref="emailInput" type="email" />
             </td>
           </tr>
           <tr>
             <td class="hidden md:table-cell p-2">
-              <span class="text-lg text-gray-700">
+              <span class="text-lg text-sub dark:text-sub-dark">
                 <Text path="login.password" />
               </span>
             </td>
             <td class="table-cell p-2">
               <input :placeholder="text('login.password')"
-                class="px-3 py-[0.45rem] md:py-1.5 border-gray-500 outline-none rounded-md text-lg w-full md:w-60 bg-indigo-50"
+                class="px-3 py-[0.45rem] md:py-1.5 border-gray-500 outline-none rounded-md text-lg w-full md:w-60 bg-indigo-50 dark:bg-gray-800"
                 v-model="password" v-on:keyup.enter="saveClicked" ref="passwordInput" type="password" />
             </td>
           </tr>
