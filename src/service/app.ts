@@ -65,6 +65,7 @@ export default function useApp() {
     hideModal,
     showMobileMenu,
     hideMobileMenu,
-    toggleDark
+    toggleDark,
+    initializeDark
   }
 }

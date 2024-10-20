@@ -1,13 +1,13 @@
 <template>
   <div v-if="modalVisible"
-    class="fixed left-0 top-0 bg-gray-200 bg-opacity-50 h-screen w-screen flex items-center justify-center">
+    class="fixed left-0 top-0 bg-opacity-50 bg-gray-800 h-screen w-screen flex items-center justify-center">
 
     <div class="flex w-auto grow p-2 items-center justify-center">
       <!-- Overlay -->
-      <div class="bg-white text-black -mt-32 md:-mt-55 rounded-md shadow-sm w-full max-w-md grow">
+      <div class="bg-white dark:bg-gray-900 -mt-32 md:-mt-55 rounded-md shadow-sm w-full max-w-md grow">
 
         <!-- Header -->
-        <div class="bg-indigo-600 text-white py-1.5 px-4 rounded-t-md">
+        <div class="bg-indigo-600 dark:bg-indigo-900 text-white py-1.5 px-4 rounded-t-md">
           <h2 class="text-lg font-semibold">
             <Text path="app.title" />
           </h2>

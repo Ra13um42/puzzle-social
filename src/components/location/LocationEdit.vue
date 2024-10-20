@@ -2,7 +2,7 @@
   <div>
     <div id="dropdown" class="relative w-full md:w-60 mt-7">
       <button id="dropdown-button" @click.stop="toggleDropdown"
-        class="inline-flex justify-between w-full px-4 py-2.25 text-sm text-gray-700 border-1 border-gray-200 rounded-md shadow-sm focus:outline-none">
+        class="inline-flex justify-between w-full px-4 py-2.25 text-sm text-sub dark:text-sub-dark border-1 border-gray-200 dark:border-gray-700 rounded-md shadow-sm focus:outline-none">
         <span class="mr-2 text-[1rem]">{{ dropdownValue }}</span>
         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2 -mr-2 float-right" viewBox="0 0 20 20"
           fill="currentColor" aria-hidden="true">
@@ -13,16 +13,16 @@
       </button>
 
       <div id="dropdown_list"
-        class="absolute hidden left-0 mt-2 h-auto max-h-100 min-h-30 overflow-y-scroll rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 p-1 space-y-1 z-7"
+        class="absolute hidden left-0 mt-2 h-auto max-h-100 min-h-30 overflow-y-scroll rounded-md shadow-lg bg-white dark:bg-black ring-1 ring-black ring-opacity-5 p-1 space-y-1 z-7"
         :class="{ '!block': isOpen }" ref="dropdown_list" @click.stop>
 
         <input id="filter_input"
-          class="block w-full px-4 py-1.75 text-gray-800 border rounded-md border-gray-300 focus:outline-none"
+          class="block w-full px-4 py-1.75 text-sub dark:text-sub-dark bg-white dark:bg-black border rounded-md border-gray-300 dark:border-gray-600 focus:outline-none"
           type="text" :placeholder="text('profile.location.country_filter')" autocomplete="off" v-model="filter"
           ref="filter_input">
 
         <span v-for="(option) in filteredCountries"
-          class="block px-4 py-1.5 text-left text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer rounded-md"
+          class="block px-4 py-1.5 text-left text-sub dark:text-sub-dark hover:bg-gray-100 dark:hover:bg-gray-900 active:bg-blue-100 cursor-pointer rounded-md"
           @click="onContrySelected(option)">
           {{ option.native }}
         </span>
@@ -32,7 +32,7 @@
     <div class="mt-4" v-if="selectedCountry">
       <input type="text" :placeholder="text('profile.location.insert_city')" v-model="cityQuery" id="city_input"
         ref="city_input"
-        class="px-3 py-[0.45rem] md:py-1.5 border-1 shadow-sm border-gray-200 outline-none rounded-md text-md w-full md:w-60 text-black placeholder-text-md placeholder-text-gray-400"
+        class="px-3 py-[0.45rem] md:py-1.5 border-1 bg-transparent shadow-sm border-gray-200 dark:border-gray-700 outline-none rounded-md text-md w-full md:w-60 placeholder-text-md placeholder-text-gray-400"
         @keydown.enter="citySearch">
 
       <Button color="white" @click="citySearch" class="!px-6 !py-2.25 ml-0 md:ml-5 mt-5 md:mt-0">

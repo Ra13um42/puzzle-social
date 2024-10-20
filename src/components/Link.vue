@@ -15,7 +15,7 @@ interface Props {
 const props = defineProps<Props>()
 
 const buttonClasses = computed(() => {
-  const baseClasses = 'text-gray-800 font-medium focus:outline-none rounded-xl'
+  const baseClasses = ' font-medium focus:outline-none rounded-xl'
   const sizeClasses = props.size === 'small' ? 'text-xs' : 'text-md'
   return `${baseClasses} ${sizeClasses}`
 })

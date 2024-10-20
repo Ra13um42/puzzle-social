@@ -31,10 +31,10 @@ const buttonClasses = computed(() => {
 
   const colorClasses = {
     blue: 'bg-blue-500 hover:bg-blue-600',
-    red: 'bg-red-700 hover:bg-red-600',
-    white: 'bg-white !text-gray-800 hover:bg-gray-100 shadow-sm shadow-gray-300',
-    indigo: 'bg-indigo-700 hover:bg-indigo-600',
-    transparent: '!text-gray-800',
+    red: 'bg-red-700 hover:bg-red-600 dark:bg-red-800 dark:hover:bg-red-700',
+    white: 'bg-white dark:bg-black !text-gray-800 !dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-900 shadow-sm shadow-gray-300 dark:shadow-black',
+    indigo: 'bg-indigo-700 hover:bg-indigo-600 dark:bg-indigo-800 dark:hover:bg-indigo-700',
+    transparent: '!text-gray-800 !dark:text-gray-300',
   }[props.color || 'blue']
 
   return `${baseClasses} ${sizeClasses} ${colorClasses}`

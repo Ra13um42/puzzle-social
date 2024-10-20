@@ -1,9 +1,9 @@
 <template>
-  <h1 class="text-5xl font-bold tracking-tight text-gray-900 md:text-[4.2rem]">
+  <h1 class="text-5xl font-bold tracking-tight md:text-[4.2rem]">
     <span> {{ signupData.name }}.</span>
   </h1>
 
-  <p class="mt-5 text-xl leading-8 text-gray-600">
+  <p class="mt-5 text-xl leading-8 text-sub dark:text-sub-dark">
     <Text path="signup.email_password" />
   </p>
 
@@ -18,7 +18,7 @@
           </td>
           <td class="p-2 table-cell">
             <input :placeholder="text('signup.email')"
-              class="px-3 py-[0.45rem] md:py-1.5 border-gray-500 outline-none rounded-md text-lg w-full md:w-60 bg-indigo-50"
+              class="px-3 py-[0.45rem] md:py-1.5 border-gray-500 outline-none rounded-md text-lg w-full md:w-60 bg-indigo-50 dark:bg-gray-800"
               v-model="signupData.email" v-on:keyup.enter="saveClicked" ref="emailInput" type="email" />
           </td>
         </tr>
@@ -30,7 +30,7 @@
           </td>
           <td class="p-2 table-cell">
             <input :placeholder="text('signup.password')"
-              class="px-3 py-[0.45rem] md:py-1.5 border-gray-500 outline-none rounded-md text-lg w-full md:w-60 bg-indigo-50"
+              class="px-3 py-[0.45rem] md:py-1.5 border-gray-500 outline-none rounded-md text-lg w-full md:w-60 bg-indigo-50 dark:bg-gray-800"
               v-model="signupData.password" v-on:keyup.enter="saveClicked" ref="passwordInput" type="password" />
           </td>
         </tr>

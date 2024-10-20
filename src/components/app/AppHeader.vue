@@ -3,7 +3,7 @@
   <div class="flex flex-wrap justify-between items-center mx-auto">
 
     <div class="flex items-center cursor-pointer">
-      <RouterLink to="/" class="text-indigo-700 dark:text-red-500 text-[1.6rem] font-semibold">
+      <RouterLink to="/" class="text-indigo-700 dark:text-indigo-900 text-[1.6rem] font-semibold">
         <Text path="app.title" />
       </RouterLink>
     </div>
@@ -30,9 +30,7 @@
 
     <div class="flex items-center">
 
-      <button class="inline h-[1.45rem] md:h-[1.65rem] ml-1.5 mr-2 md:mr-5 mt-.5 md:mt-1 cursor-pointer"
-        @click="toggleDark">toggle</button>
-
+      <ToggleDark class="mr-5 md:mr-6" />
 
       <LanguageDropdown />
 
@@ -61,7 +59,7 @@
       </div>
 
       <Button color="transparent" @click="showMobileMenu" class="block lg:hidden !px-6 -mr-4">
-        <svg class="w-6 h-6 text-gray-500 -mt-.5" fill="currentColor" viewBox="0 0 20 20"
+        <svg class="w-6 h-6 text-gray-500 dark:text-gray-300 -mt-.5" fill="currentColor" viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd"
             d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
@@ -81,11 +79,12 @@ import { RouterLink, useRouter } from 'vue-router'
 import useAuth from '../../service/auth'
 import useApp from './../../service/app'
 import LanguageDropdown from '../language/LanguageDropdown.vue'
+import ToggleDark from './DarkToggle.vue'
 
 const router = useRouter()
 
 const { loggedin, doLogout, user } = useAuth()
-const { showMobileMenu, toggleDark } = useApp()
+const { showMobileMenu } = useApp()
 
 const logout = () => {
   doLogout()

@@ -33,6 +33,7 @@ import { RouterView } from 'vue-router'
 
 import { transitionOut, transitionIn } from './modules/transition.module'
 import useLanguage from './service/language'
+import useApp from './service/app'
 
 import AppHeader from './components/app/AppHeader.vue'
 import AppFooter from './components/app/AppFooter.vue'
@@ -40,15 +41,17 @@ import MobileMenu from './components/app/MobileMenu.vue'
 import Modal from './components/app/Modal.vue'
 
 const { initialize: initializeLanguage } = useLanguage()
+const { initializeDark } = useApp()
 
 onBeforeMount(() => {
   initializeLanguage()
+  initializeDark()
 })
 </script>
 
 <style scoped>
 .fade-enter-active {
-  transition: opacity 0.3s ease;
+  transition: opacity 0.27s ease;
 }
 
 .fade-enter-from,

@@ -3,15 +3,17 @@
 
     <div class="w-full mt-15 z-4">
       <div class="text-right">
-        <button class="cursor-pointer px-4 md:px-5 py-1.5 md:py-2.25 rounded-md text-sm font-semibold hover:bg-gray-100"
-          :class="{ 'bg-gray-100': zoom === (i) }" v-for="i in range(2, 14)" :key="i" @click="setZoom(i)">
+        <button
+          class="cursor-pointer px-4 md:px-5 py-1.5 md:py-2.25 rounded-md text-sm text-sub dark:text-sub-dark font-semibold hover:bg-gray-100 dark:hover:bg-gray-800"
+          :class="{ 'bg-gray-100': zoom === (i), 'dark:bg-gray-800': zoom === (i) }" v-for="i in range(2, 14)" :key="i"
+          @click="setZoom(i)">
           {{ i }}
         </button>
       </div>
 
       <div id="map" class="block h-100 md:h-150 w-full mt-1.5 border-2 border-gray-400"></div>
 
-      <div class="mt-1.5 text-gray-700">
+      <div class="mt-1.5 text-sub dark:text-sub-dark">
         <div v-if="isMobile()">
           <Text path="profile.location.enable_panning_hint" v-if="!panEnabled" />
           <Text path="profile.location.disable_panning_hint" v-else />

@@ -3,11 +3,11 @@
 
     <div class="flex flex-col md:flex-row justify-between">
       <div>
-        <h1 class="text-5xl md:text-[4rem] font-bold tracking-tight text-gray-900">{{ user?.name }}</h1>
-        <p class="mt-6 text-xl leading-8 text-gray-600" v-if="isOwn">
+        <h1 class="text-5xl md:text-[4rem] font-bold tracking-tight">{{ user?.name }}</h1>
+        <p class="mt-6 text-xl leading-8 text-sub dark:text-sub-dark" v-if="isOwn">
           <Text path="profile.subtitle_own" />
         </p>
-        <p class="mt-6 text-xl leading-8 text-gray-600" v-if="!isOwn">
+        <p class="mt-6 text-xl leading-8 text-sub dark:text-sub-dark" v-if="!isOwn">
           <Text path="profile.subtitle" />
         </p>
 
@@ -21,14 +21,14 @@
         <p class="text-xl">
           <Text path="profile.about_me" />
         </p>
-        <p class="text-lg text-gray-300">
+        <p class="text-lg text-gray-300 dark:text-gray-600">
           <Text path="profile.coming_soon" />
         </p>
         <br><br>
         <p class="text-xl">
           <Text path="profile.social_media" />
         </p>
-        <p class="text-lg text-gray-300">
+        <p class="text-lg text-gray-300 dark:text-gray-600">
           <Text path="profile.coming_soon" />
         </p>
       </div>
@@ -36,7 +36,7 @@
 
     <div>
       <div class="relative mt-14 md:mt-20">
-        <span class="mt-6 text-2xl leading-8 text-gray-800">
+        <span class="mt-6 text-2xl leading-8">
           <Text path="profile.location.title" />
         </span>
 
@@ -60,7 +60,7 @@
         </div>
 
 
-        <div class="mt-5" v-if="mapData">{{ mapData?.location?.display_name }}</div>
+        <div class="mt-5 text-sub dark:text-sub-dark" v-if="mapData">{{ mapData?.location?.display_name }}</div>
         <div class="mt-5 text-lg text-gray-300"
           v-if="!user?.location && !mapData?.location?.display_name && !editLocation">
           <Text path="profile.location.not_set" />
