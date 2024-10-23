@@ -8,7 +8,19 @@ export default [
     code: 'en'
   },
   {
+    name: 'Français',
+    code: 'fr'
+  },
+  {
     name: 'Español',
     code: 'es'
+  },
+  {
+    name: 'Italiano',
+    code: 'it'
+  },
+  {
+    name: 'Nederlands',
+    code: 'nl'
   }
 ]

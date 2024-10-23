@@ -1,6 +1,6 @@
 <template>
 
-  <div class="flex items-center justify-center" @click="toggleDark">
+  <div class="flex items-center justify-center select-none" @click="toggleDark">
     <div
       class="relative w-13 h-6.4 flex items-center bg-gray-200 dark:bg-gray-800 border-1 border-gray-300 dark:border-gray-700 rounded-full p-1 cursor-pointer transition-colors duration-200">
       <div

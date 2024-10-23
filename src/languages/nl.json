@@ -1,0 +1,97 @@
+{
+  "app": {
+    "title": "Puzzle.",
+    "subtitle": "Het sociale netwerk voor verbinding.",
+    "menu": {
+      "people": "Mensen",
+      "events": "Evenementen",
+      "locations": "Locaties"
+    },
+    "login": "Inloggen",
+    "logout": "Uitloggen",
+    "start": "Start",
+    "register": "Registreren",
+    "signup": "Account aanmaken",
+    "your_profile": "Jouw profiel",
+    "settings": "Instellingen",
+    "yes": "Ja",
+    "no": "Nee",
+    "ok": "Oké",
+    "cancel": "Annuleren",
+    "footer": {
+      "copyright": "© 2024 Puzzle Social",
+      "terms": "Gebruiksvoorwaarden",
+      "privacy": "Privacyverklaring"
+    }
+  },
+  "login": {
+    "title": "Inloggen",
+    "email": "E-mail",
+    "password": "Wachtwoord",
+    "button": "Inloggen",
+    "error": "Inloggen mislukt"
+  },
+  "signup": {
+    "name_question": "Hoe wil je heten op Puzzle?",
+    "name": "Naam",
+    "name_confirm_button": "Oké",
+    "email_password": "Stel je e-mail en wachtwoord in.",
+    "email": "E-mail",
+    "password": "Wachtwoord",
+    "create_account": "Account aanmaken"
+  },
+  "profile": {
+    "subtitle": "Profiel op Puzzle.",
+    "subtitle_own": "Jouw profiel.",
+    "about_me": "Over mij",
+    "social_media": "Sociale media",
+    "coming_soon": "Binnenkort beschikbaar.",
+    "change_image": "Afbeelding wijzigen",
+    "location": {
+      "title": "Locatie",
+      "set": "instellen",
+      "change": "wijzigen",
+      "not_set": "Niet opgegeven",
+      "select_country": "Land selecteren",
+      "country_filter": "Filteren",
+      "insert_city": "Stad invoeren",
+      "search": "Zoeken",
+      "no_result": "Geen resultaat",
+      "save": "Opslaan",
+      "cancel": "Annuleren",
+      "enable_panning_hint": "Tik op de kaart om verschuiven te activeren.",
+      "disable_panning_hint": "Tik op de kaart om verschuiven te deactiveren.",
+      "enable_zooming_hint": "Klik op de kaart om in te zoomen.",
+      "disable_zooming_hint": "Klik op de kaart om uit te zoomen."
+    },
+    "back": "Terug"
+  },
+  "settings": {
+    "title": "Instellingen",
+    "subtitle": "Instellingen",
+    "delete_account": {
+      "title": "Account verwijderen",
+      "button": "Verwijderen",
+      "confirm": "Account echt verwijderen?",
+      "success": "Account verwijderd."
+    },
+    "language": "Taal"
+  },
+  "pages": {
+    "people": {
+      "title": "Mensen.",
+      "subtitle": "Profielen en visies.",
+      "coming_soon": "Binnenkort beschikbaar."
+    },
+    "events": {
+      "title": "Evenementen.",
+      "subtitle": "Dansfeesten en barbecues.",
+      "coming_soon": "Binnenkort beschikbaar."
+    },
+    "locations": {
+      "title": "Locaties.",
+      "subtitle": "Gemeenschappen, boerderijen en tuinen.",
+      "coming_soon": "Binnenkort beschikbaar."
+    }
+  }
+}

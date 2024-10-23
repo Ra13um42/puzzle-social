@@ -1,0 +1,97 @@
+{
+  "app": {
+    "title": "Puzzle.",
+    "subtitle": "Le réseau social pour la connexion.",
+    "menu": {
+      "people": "Personnes",
+      "events": "Événements",
+      "locations": "Lieux"
+    },
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "start": "Accueil",
+    "register": "S'inscrire",
+    "signup": "Créer un compte",
+    "your_profile": "Ton profil",
+    "settings": "Paramètres",
+    "yes": "Oui",
+    "no": "Non",
+    "ok": "Ok",
+    "cancel": "Annuler",
+    "footer": {
+      "copyright": "© 2024 Puzzle Social",
+      "terms": "Conditions d'utilisation",
+      "privacy": "Politique de confidentialité"
+    }
+  },
+  "login": {
+    "title": "Connexion",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "button": "Se connecter",
+    "error": "Connexion échouée"
+  },
+  "signup": {
+    "name_question": "Comment veux-tu t'appeler sur Puzzle ?",
+    "name": "Nom",
+    "name_confirm_button": "Ok",
+    "email_password": "Définir e-mail et mot de passe.",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "create_account": "Créer un compte"
+  },
+  "profile": {
+    "subtitle": "Profil sur Puzzle.",
+    "subtitle_own": "Ton profil.",
+    "about_me": "À propos de moi",
+    "social_media": "Réseaux sociaux",
+    "coming_soon": "Bientôt disponible.",
+    "change_image": "Changer l'image",
+    "location": {
+      "title": "Localisation",
+      "set": "définir",
+      "change": "modifier",
+      "not_set": "Non spécifié",
+      "select_country": "Sélectionner un pays",
+      "country_filter": "Filtrer",
+      "insert_city": "Saisir la ville",
+      "search": "Rechercher",
+      "no_result": "Aucun résultat",
+      "save": "Enregistrer",
+      "cancel": "Annuler",
+      "enable_panning_hint": "Touchez la carte pour activer le déplacement.",
+      "disable_panning_hint": "Touchez la carte pour désactiver le déplacement.",
+      "enable_zooming_hint": "Cliquez sur la carte pour activer le zoom.",
+      "disable_zooming_hint": "Cliquez sur la carte pour désactiver le zoom."
+    },
+    "back": "Retour"
+  },
+  "settings": {
+    "title": "Paramètres",
+    "subtitle": "Paramètres",
+    "delete_account": {
+      "title": "Supprimer le compte",
+      "button": "Supprimer",
+      "confirm": "Supprimer le compte pour de bon ?",
+      "success": "Compte supprimé."
+    },
+    "language": "Langue"
+  },
+  "pages": {
+    "people": {
+      "title": "Personnes.",
+      "subtitle": "Profils et visions.",
+      "coming_soon": "Bientôt disponible."
+    },
+    "events": {
+      "title": "Événements.",
+      "subtitle": "Soirées dansantes et barbecues.",
+      "coming_soon": "Bientôt disponible."
+    },
+    "locations": {
+      "title": "Lieux.",
+      "subtitle": "Communautés, fermes et jardins.",
+      "coming_soon": "Bientôt disponible."
+    }
+  }
+}

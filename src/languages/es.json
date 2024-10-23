@@ -1,97 +1,97 @@
 {
   "app": {
     "title": "Puzzle.",
-    "subtitle": "Sozial Network for Connection.",
+    "subtitle": "La red social para la conexión.",
     "menu": {
-      "people": "People",
-      "events": "Events",
-      "locations": "Locations"
+      "people": "Personas",
+      "events": "Eventos",
+      "locations": "Lugares"
     },
-    "login": "Login",
-    "logout": "Logout",
-    "start": "Start",
-    "register": "Signup",
-    "signup": "Signup",
-    "your_profile": "Your Profile",
-    "settings": "Settings",
-    "yes": "Yes",
+    "login": "Iniciar sesión",
+    "logout": "Cerrar sesión",
+    "start": "Inicio",
+    "register": "Registrarse",
+    "signup": "Crear cuenta",
+    "your_profile": "Tu perfil",
+    "settings": "Ajustes",
+    "yes": "Sí",
     "no": "No",
     "ok": "Ok",
-    "cancel": "Cancel",
+    "cancel": "Cancelar",
     "footer": {
       "copyright": "© 2024 Puzzle Social",
-      "terms": "Terms of Service",
-      "privacy": "Privacy Policy"
+      "terms": "Términos de uso",
+      "privacy": "Política de privacidad"
     }
   },
   "login": {
-    "title": "Login",
-    "email": "E-Mail",
-    "password": "Password",
-    "button": "Login",
-    "error": "Login not successful"
+    "title": "Iniciar sesión",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "button": "Iniciar sesión",
+    "error": "Inicio de sesión fallido"
   },
   "signup": {
-    "name_question": "Select a name on Puzzle.",
-    "name": "Name",
+    "name_question": "¿Cómo quieres llamarte en Puzzle?",
+    "name": "Nombre",
     "name_confirm_button": "Ok",
-    "email_password": "Set email and password.",
-    "email": "E-Mail",
-    "password": "Password",
-    "create_account": "Create Account"
+    "email_password": "Establecer correo electrónico y contraseña.",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "create_account": "Crear cuenta"
   },
   "profile": {
-    "subtitle": "Profile on Puzzle.",
-    "subtitle_own": "Your Profile.",
-    "about_me": "About me",
-    "social_media": "Social Media",
-    "coming_soon": "Coming soon.",
-    "change_image": "Change Picture",
+    "subtitle": "Perfil en Puzzle.",
+    "subtitle_own": "Tu perfil.",
+    "about_me": "Sobre mí",
+    "social_media": "Redes sociales",
+    "coming_soon": "Próximamente.",
+    "change_image": "Cambiar imagen",
     "location": {
-      "title": "Location",
-      "set": "set",
-      "change": "change",
-      "not_set": "Not set",
-      "select_country": "Select country",
-      "country_filter": "Filter",
-      "insert_city": "Insert city",
-      "search": "Search",
-      "no_result": "No result",
-      "save": "Save",
-      "cancel": "Cancel",
-      "enable_panning_hint": "Tap on map to activate panning.",
-      "disable_panning_hint": "Tap on map to disable panning.",
-      "enable_zooming_hint": "Click on map to activate zooming.",
-      "disable_zooming_hint": "Click on map to disable zooming."
+      "title": "Ubicación",
+      "set": "establecer",
+      "change": "cambiar",
+      "not_set": "No especificado",
+      "select_country": "Seleccionar país",
+      "country_filter": "Filtrar",
+      "insert_city": "Ingresar ciudad",
+      "search": "Buscar",
+      "no_result": "Sin resultados",
+      "save": "Guardar",
+      "cancel": "Cancelar",
+      "enable_panning_hint": "Toca el mapa para activar el desplazamiento.",
+      "disable_panning_hint": "Toca el mapa para desactivar el desplazamiento.",
+      "enable_zooming_hint": "Haz clic en el mapa para activar el zoom.",
+      "disable_zooming_hint": "Haz clic en el mapa para desactivar el zoom."
     },
-    "back": "Back"
+    "back": "Atrás"
   },
   "settings": {
-    "title": "Settings",
-    "subtitle": "Settings",
+    "title": "Ajustes",
+    "subtitle": "Ajustes",
     "delete_account": {
-      "title": "Delete Account",
-      "button": "Delete",
-      "confirm": "Really delete Account?",
-      "success": "Account deleted."
+      "title": "Eliminar cuenta",
+      "button": "Eliminar",
+      "confirm": "¿Eliminar cuenta de verdad?",
+      "success": "Cuenta eliminada."
     },
-    "language": "Sprache"
+    "language": "Idioma"
   },
   "pages": {
     "people": {
-      "title": "People.",
-      "subtitle": "Profiles and Visions.",
-      "coming_soon": "Coming soon."
+      "title": "Personas.",
+      "subtitle": "Perfiles y visiones.",
+      "coming_soon": "Próximamente."
     },
     "events": {
-      "title": "Events.",
-      "subtitle": "Dance parties and barbecues.",
-      "coming_soon": "Coming soon."
+      "title": "Eventos.",
+      "subtitle": "Fiestas de baile y barbacoas.",
+      "coming_soon": "Próximamente."
     },
     "locations": {
-      "title": "Places.",
-      "subtitle": "Communities, farms and gardens.",
-      "coming_soon": "Coming soon."
+      "title": "Lugares.",
+      "subtitle": "Comunidades, granjas y jardines.",
+      "coming_soon": "Próximamente."
     }
   }
 }
