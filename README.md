@@ -18,6 +18,10 @@ If you would like to participate, contribute your own code, implement new featur
 Feel free to join our group in Telegram:
 https://t.me/puzzle_social_team
 
+## Documentation
+To read the full documentation, go to this page, hosted on GitHub Pages:
+[Documentation](https://ra13um42.github.io/puzzle-social-docs/)
+
 ## Technology
 
 The project is built with Vue 3 in Typescript + Vite and Unocss.
