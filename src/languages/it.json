@@ -1,0 +1,97 @@
+{
+  "app": {
+    "title": "Puzzle.",
+    "subtitle": "Il social network per la connessione.",
+    "menu": {
+      "people": "Persone",
+      "events": "Eventi",
+      "locations": "Luoghi"
+    },
+    "login": "Accedi",
+    "logout": "Esci",
+    "start": "Inizio",
+    "register": "Registrati",
+    "signup": "Crea account",
+    "your_profile": "Il tuo profilo",
+    "settings": "Impostazioni",
+    "yes": "Sì",
+    "no": "No",
+    "ok": "Ok",
+    "cancel": "Annulla",
+    "footer": {
+      "copyright": "© 2024 Puzzle Social",
+      "terms": "Termini di utilizzo",
+      "privacy": "Informativa sulla privacy"
+    }
+  },
+  "login": {
+    "title": "Accedi",
+    "email": "E-mail",
+    "password": "Password",
+    "button": "Accedi",
+    "error": "Accesso non riuscito"
+  },
+  "signup": {
+    "name_question": "Come vuoi chiamarti su Puzzle?",
+    "name": "Nome",
+    "name_confirm_button": "Ok",
+    "email_password": "Imposta e-mail e password.",
+    "email": "E-mail",
+    "password": "Password",
+    "create_account": "Crea account"
+  },
+  "profile": {
+    "subtitle": "Profilo su Puzzle.",
+    "subtitle_own": "Il tuo profilo.",
+    "about_me": "Chi sono",
+    "social_media": "Social media",
+    "coming_soon": "In arrivo.",
+    "change_image": "Cambia immagine",
+    "location": {
+      "title": "Posizione",
+      "set": "imposta",
+      "change": "cambia",
+      "not_set": "Non specificato",
+      "select_country": "Seleziona paese",
+      "country_filter": "Filtra",
+      "insert_city": "Inserisci città",
+      "search": "Cerca",
+      "no_result": "Nessun risultato",
+      "save": "Salva",
+      "cancel": "Annulla",
+      "enable_panning_hint": "Tocca la mappa per attivare lo spostamento.",
+      "disable_panning_hint": "Tocca la mappa per disattivare lo spostamento.",
+      "enable_zooming_hint": "Clicca sulla mappa per attivare lo zoom.",
+      "disable_zooming_hint": "Clicca sulla mappa per disattivare lo zoom."
+    },
+    "back": "Indietro"
+  },
+  "settings": {
+    "title": "Impostazioni",
+    "subtitle": "Impostazioni",
+    "delete_account": {
+      "title": "Elimina account",
+      "button": "Elimina",
+      "confirm": "Eliminare davvero l'account?",
+      "success": "Account eliminato."
+    },
+    "language": "Lingua"
+  },
+  "pages": {
+    "people": {
+      "title": "Persone.",
+      "subtitle": "Profili e visioni.",
+      "coming_soon": "In arrivo."
+    },
+    "events": {
+      "title": "Eventi.",
+      "subtitle": "Feste da ballo e grigliate.",
+      "coming_soon": "In arrivo."
+    },
+    "locations": {
+      "title": "Luoghi.",
+      "subtitle": "Comunità, fattorie e giardini.",
+      "coming_soon": "In arrivo."
+    }
+  }
+}
